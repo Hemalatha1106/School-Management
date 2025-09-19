@@ -1,0 +1,306 @@
+{% extends "fee_management/base.html" %}
+
+{% block title %}Fee Management Dashboard{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <h2><i class="fas fa-chart-line"></i> Fee Management Dashboard</h2>
+        <p class="text-muted">Comprehensive overview of all fee collections and payments.</p>
+    </div>
+</div>
+
+<!-- Key Metrics -->
+<div class="row mb-4">
+    <div class="col-md-3 col-sm-6 mb-3">
+        <div class="card dashboard-card text-center">
+            <div class="card-body">
+                <h5 class="card-title text-primary">
+                    <i class="fas fa-rupee-sign"></i> Total Collected
+                </h5>
+                <h3 class="card-text">₹{{ total_collected|floatformat:2 }}</h3>
+                <small class="text-muted">This month: ₹{{ monthly_collected|floatformat:2 }}</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-3">
+        <div class="card dashboard-card text-center">
+            <div class="card-body">
+                <h5 class="card-title text-warning">
+                    <i class="fas fa-clock"></i> Outstanding
+                </h5>
+                <h3 class="card-text">₹{{ total_outstanding|floatformat:2 }}</h3>
+                <small class="text-muted">{{ outstanding_count }} fees</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-3">
+        <div class="card dashboard-card text-center">
+            <div class="card-body">
+                <h5 class="card-title text-danger">
+                    <i class="fas fa-exclamation-triangle"></i> Overdue
+                </h5>
+                <h3 class="card-text">₹{{ overdue_amount|floatformat:2 }}</h3>
+                <small class="text-muted">{{ overdue_count }} fees</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-3">
+        <div class="card dashboard-card text-center">
+            <div class="card-body">
+                <h5 class="card-title text-success">
+                    <i class="fas fa-users"></i> Active Students
+                </h5>
+                <h3 class="card-text">{{ active_students_count }}</h3>
+                <small class="text-muted">With fees</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Quick Actions -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card dashboard-card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-bolt"></i> Quick Actions</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <a href="{% url 'fee_add' %}" class="btn btn-primary btn-lg w-100">
+                            <i class="fas fa-plus"></i><br>Add New Fee
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <a href="{% url 'fee_list' %}" class="btn btn-info btn-lg w-100">
+                            <i class="fas fa-list"></i><br>View All Fees
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <a href="{% url 'fee_reports' %}" class="btn btn-success btn-lg w-100">
+                            <i class="fas fa-chart-bar"></i><br>Generate Reports
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <button class="btn btn-warning btn-lg w-100" onclick="sendReminders()">
+                            <i class="fas fa-bell"></i><br>Send Reminders
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Activity & Charts Row -->
+<div class="row mb-4">
+    <!-- Recent Payments -->
+    <div class="col-lg-6 mb-4">
+        <div class="card dashboard-card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-history"></i> Recent Payments</h5>
+            </div>
+            <div class="card-body">
+                {% if recent_payments %}
+                    <div class="list-group list-group-flush">
+                        {% for payment in recent_payments %}
+                        <div class="list-group-item px-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1">{{ payment.fee.student.user.get_full_name }}</h6>
+                                    <p class="mb-1 text-muted small">
+                                        {{ payment.fee.fee_type.name }} - {{ payment.get_payment_method_display }}
+                                    </p>
+                                    <small class="text-muted">{{ payment.payment_date|date:"M d, Y" }}</small>
+                                </div>
+                                <div class="text-end">
+                                    <span class="badge
+                                        {% if payment.status == 'completed' %}bg-success
+                                        {% elif payment.status == 'pending' %}bg-warning
+                                        {% else %}bg-secondary{% endif %}">
+                                        {{ payment.get_status_display }}
+                                    </span>
+                                    <br>
+                                    <strong class="text-success">₹{{ payment.amount|floatformat:2 }}</strong>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="text-center py-4">
+                        <i class="fas fa-receipt fa-2x text-muted mb-2"></i>
+                        <p class="text-muted">No recent payments</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Overdue Fees -->
+    <div class="col-lg-6 mb-4">
+        <div class="card dashboard-card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-exclamation-triangle"></i> Overdue Fees</h5>
+            </div>
+            <div class="card-body">
+                {% if overdue_fees %}
+                    <div class="list-group list-group-flush">
+                        {% for fee in overdue_fees %}
+                        <div class="list-group-item px-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1">{{ fee.student.user.get_full_name }}</h6>
+                                    <p class="mb-1 text-muted small">
+                                        {{ fee.fee_type.name }} - Due: {{ fee.due_date|date:"M d, Y" }}
+                                    </p>
+                                    <small class="text-danger">
+                                        Overdue by {{ fee.days_overdue }} days
+                                    </small>
+                                </div>
+                                <div class="text-end">
+                                    <span class="fee-status overdue">Overdue</span>
+                                    <br>
+                                    <strong class="text-danger">₹{{ fee.outstanding_amount|floatformat:2 }}</strong>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="text-center py-4">
+                        <i class="fas fa-check-circle fa-2x text-success mb-2"></i>
+                        <p class="text-success">No overdue fees!</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fee Collection Trends -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card dashboard-card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-chart-line"></i> Fee Collection Trends</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="collectionChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Class-wise Fee Summary -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card dashboard-card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-school"></i> Class-wise Fee Summary</h5>
+            </div>
+            <div class="card-body">
+                {% if class_summary %}
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Students</th>
+                                    <th>Total Fees</th>
+                                    <th>Collected</th>
+                                    <th>Outstanding</th>
+                                    <th>Collection Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for summary in class_summary %}
+                                <tr>
+                                    <td><strong>{{ summary.class_name }}</strong></td>
+                                    <td>{{ summary.student_count }}</td>
+                                    <td>₹{{ summary.total_fees|floatformat:2 }}</td>
+                                    <td>₹{{ summary.total_collected|floatformat:2 }}</td>
+                                    <td>₹{{ summary.total_outstanding|floatformat:2 }}</td>
+                                    <td>
+                                        <div class="progress" style="width: 100px;">
+                                            <div class="progress-bar progress-bar-custom
+                                                {% if summary.collection_rate >= 80 %}bg-success
+                                                {% elif summary.collection_rate >= 60 %}bg-warning
+                                                {% else %}bg-danger{% endif %}"
+                                                data-width="{{ summary.collection_rate }}">
+                                                {{ summary.collection_rate|floatformat:1 }}%
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                    <div class="text-center py-4">
+                        <i class="fas fa-info-circle fa-2x text-muted mb-2"></i>
+                        <p class="text-muted">No class summary data available</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+function sendReminders() {
+    if (confirm('Are you sure you want to send payment reminders to all students with outstanding fees?')) {
+        // Show loading
+        const btn = event.target;
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        btn.disabled = true;
+
+        // In a real implementation, make AJAX call to send reminders
+        setTimeout(() => {
+            alert('Payment reminders sent successfully!');
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+        }, 2000);
+    }
+}
+
+// Initialize collection chart
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('collectionChart');
+    if (ctx) {
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Monthly Collection (₹)',
+                    data: [12000, 15000, 18000, 14000, 16000, 19000, 17000, 20000, 18000, 21000, 19000, 22000],
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '₹' + value.toLocaleString();
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+});
+</script>
+{% endblock %}

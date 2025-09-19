@@ -1,0 +1,331 @@
+{% extends "fee_management/base.html" %}
+
+{% block title %}Process Payment{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'fee_admin_dashboard' %}">Fee Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'fee_list' %}">Fees</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Process Payment</li>
+            </ol>
+        </nav>
+        <h2><i class="fas fa-credit-card"></i> Process Payment</h2>
+        <p class="text-muted">Record a payment for the selected fee.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <!-- Fee Information Card -->
+        <div class="card dashboard-card mb-4">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-info-circle"></i> Fee Details</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Student Information</h6>
+                        <p class="mb-1"><strong>Name:</strong> {{ fee.student.user.get_full_name }}</p>
+                        <p class="mb-1"><strong>Class:</strong> {{ fee.student.school_class.name }}</p>
+                        <p class="mb-1"><strong>Fee Type:</strong> {{ fee.fee_type.name }}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Fee Summary</h6>
+                        <p class="mb-1"><strong>Total Amount:</strong> ₹{{ fee.amount|floatformat:2 }}</p>
+                        <p class="mb-1"><strong>Waived Amount:</strong> ₹{{ fee.waived_amount|floatformat:2 }}</p>
+                        <p class="mb-1"><strong>Outstanding:</strong>
+                            <span class="text-danger fw-bold">₹{{ fee.outstanding_amount|floatformat:2 }}</span>
+                        </p>
+                        <p class="mb-1"><strong>Due Date:</strong> {{ fee.due_date|date:"M d, Y" }}</p>
+                        <p class="mb-1"><strong>Status:</strong>
+                            <span class="fee-status {{ fee.status }}">{{ fee.get_status_display }}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Form -->
+        <div class="card dashboard-card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-money-bill-wave"></i> Payment Information</h5>
+            </div>
+            <div class="card-body">
+                <form method="post" class="fee-form">
+                    {% csrf_token %}
+
+                    <!-- Payment Amount -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="{{ form.amount.id_for_label }}" class="form-label">
+                                <i class="fas fa-rupee-sign"></i> Payment Amount (₹) <span class="text-danger">*</span>
+                            </label>
+                            <div class="input-group">
+                                <span class="input-group-text">₹</span>
+                                {{ form.amount|add_class:"form-control" }}
+                            </div>
+                            <input type="hidden" id="max-amount" value="{{ fee.outstanding_amount|default:0 }}">
+                            {% if form.amount.errors %}
+                                <div class="text-danger small">
+                                    {% for error in form.amount.errors %}{{ error }}{% endfor %}
+                                </div>
+                            {% endif %}
+                            <div class="form-text">
+                                Maximum allowed: ₹{{ fee.outstanding_amount|floatformat:2 }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="{{ form.payment_method.id_for_label }}" class="form-label">
+                                <i class="fas fa-credit-card"></i> Payment Method <span class="text-danger">*</span>
+                            </label>
+                            {{ form.payment_method }}
+                            {% if form.payment_method.errors %}
+                                <div class="text-danger small">
+                                    {% for error in form.payment_method.errors %}{{ error }}{% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Stripe Card Input (hidden by default) -->
+                    <div id="stripe-card-section" class="mb-3" style="display: none;">
+                        <label class="form-label">
+                            <i class="fas fa-credit-card"></i> Card Details <span class="text-danger">*</span>
+                        </label>
+                        <div id="stripe-card-element" class="form-control" style="padding: 10px; border: 1px solid #ced4da; border-radius: 0.375rem;">
+                            <!-- Stripe Elements will be inserted here -->
+                        </div>
+                        <div id="stripe-card-errors" class="text-danger small mt-1" role="alert"></div>
+                        <div class="form-text">Your card information is secure and encrypted.</div>
+                    </div>
+
+                    <!-- Transaction Details -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="{{ form.transaction_id.id_for_label }}" class="form-label">
+                                <i class="fas fa-hashtag"></i> Transaction ID/Reference
+                            </label>
+                            {{ form.transaction_id }}
+                            {% if form.transaction_id.errors %}
+                                <div class="text-danger small">
+                                    {% for error in form.transaction_id.errors %}{{ error }}{% endfor %}
+                                </div>
+                            {% endif %}
+                            <div class="form-text">UPI transaction ID or bank reference number</div>
+                        </div>
+                    </div>
+
+                    <!-- Notes -->
+                    <div class="mb-3">
+                        <label for="{{ form.notes.id_for_label }}" class="form-label">
+                            <i class="fas fa-sticky-note"></i> Notes
+                        </label>
+                        {{ form.notes }}
+                        {% if form.notes.errors %}
+                            <div class="text-danger small">
+                                {% for error in form.notes.errors %}{{ error }}{% endfor %}
+                            </div>
+                        {% endif %}
+                        <div class="form-text">Optional notes about this payment</div>
+                    </div>
+
+                    <!-- Hidden Fields -->
+                    {{ form.fee }}
+
+                    <!-- Payment Preview -->
+                    <div class="alert alert-info">
+                        <h6><i class="fas fa-eye"></i> Payment Preview</h6>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="mb-1"><strong>Amount to Pay:</strong> <span id="preview-amount">₹0.00</span></p>
+                                <p class="mb-1"><strong>Payment Method:</strong> <span id="preview-method">Select method</span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="mb-1"><strong>Remaining Balance:</strong> <span id="preview-remaining">₹{{ fee.outstanding_amount|floatformat:2 }}</span></p>
+                                <p class="mb-1"><strong>Status After Payment:</strong> <span id="preview-status">Partial</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Actions -->
+                    <div class="d-flex justify-content-between mt-4">
+                        <a href="{% url 'fee_detail' fee.id %}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Cancel
+                        </a>
+                        <button type="submit" class="btn btn-success btn-lg">
+                            <i class="fas fa-check"></i> Process Payment
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<!-- Stripe.js -->
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+// Payment form validation and preview
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.fee-form');
+    const amountInput = document.getElementById('id_amount');
+    const methodSelect = document.getElementById('id_payment_method');
+    const outstandingAmount = parseFloat(document.getElementById('max-amount').value || '0');
+
+    // Stripe Elements
+    let stripe, cardElement;
+    const stripeCardContainer = document.getElementById('stripe-card-element');
+    const stripeErrors = document.getElementById('stripe-card-errors');
+
+    // Initialize Stripe if available
+    if (typeof Stripe !== 'undefined') {
+        // You'll need to replace this with your actual Stripe publishable key
+        stripe = Stripe('pk_test_your_stripe_publishable_key_here');
+        const elements = stripe.elements();
+
+        // Create card element
+        cardElement = elements.create('card', {
+            style: {
+                base: {
+                    fontSize: '16px',
+                    color: '#32325d',
+                    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                    '::placeholder': {
+                        color: '#aab7c4'
+                    }
+                }
+            }
+        });
+
+        cardElement.mount('#stripe-card-element');
+
+        // Handle card element changes
+        cardElement.on('change', function(event) {
+            if (event.error) {
+                stripeErrors.textContent = event.error.message;
+            } else {
+                stripeErrors.textContent = '';
+            }
+        });
+    }
+
+    // Show/hide Stripe card input based on payment method
+    function toggleStripeCard() {
+        const selectedMethod = methodSelect.value;
+        const stripeCardSection = document.getElementById('stripe-card-section');
+
+        if (selectedMethod === 'stripe') {
+            stripeCardSection.style.display = 'block';
+        } else {
+            stripeCardSection.style.display = 'none';
+        }
+    }
+
+    // Update payment preview
+    function updatePreview() {
+        const amount = parseFloat(amountInput.value) || 0;
+        const method = methodSelect.options[methodSelect.selectedIndex].text;
+
+        // Update preview values
+        document.getElementById('preview-amount').textContent = '₹' + amount.toFixed(2);
+        document.getElementById('preview-method').textContent = method;
+
+        // Calculate remaining balance
+        const remaining = outstandingAmount - amount;
+        document.getElementById('preview-remaining').textContent = '₹' + Math.max(0, remaining).toFixed(2);
+
+        // Determine status after payment
+        let status = 'Partial';
+        if (amount >= outstandingAmount) {
+            status = 'Paid';
+        } else if (amount > 0) {
+            status = 'Partial';
+        }
+        document.getElementById('preview-status').textContent = status;
+
+        // Toggle Stripe card visibility
+        toggleStripeCard();
+    }
+
+    // Add event listeners
+    if (amountInput) amountInput.addEventListener('input', updatePreview);
+    if (methodSelect) methodSelect.addEventListener('change', updatePreview);
+
+    // Form validation and submission
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            const amount = parseFloat(amountInput.value) || 0;
+            const selectedMethod = methodSelect.value;
+
+            if (amount <= 0) {
+                e.preventDefault();
+                alert('Payment amount must be greater than zero.');
+                return;
+            }
+
+            if (amount > outstandingAmount) {
+                e.preventDefault();
+                alert('Payment amount cannot exceed the outstanding balance of ₹' + outstandingAmount.toFixed(2));
+                return;
+            }
+
+            if (!selectedMethod) {
+                e.preventDefault();
+                alert('Please select a payment method.');
+                return;
+            }
+
+            // Handle Stripe payment
+            if (selectedMethod === 'stripe') {
+                e.preventDefault(); // Prevent default form submission
+
+                if (!stripe || !cardElement) {
+                    alert('Stripe is not properly initialized. Please refresh the page.');
+                    return;
+                }
+
+                // Create payment intent (this would typically be done server-side)
+                // For now, we'll simulate the process
+                stripe.createPaymentMethod({
+                    type: 'card',
+                    card: cardElement,
+                }).then(function(result) {
+                    if (result.error) {
+                        stripeErrors.textContent = result.error.message;
+                    } else {
+                        // Add the payment method ID to the form
+                        const paymentMethodInput = document.createElement('input');
+                        paymentMethodInput.type = 'hidden';
+                        paymentMethodInput.name = 'stripe_payment_method_id';
+                        paymentMethodInput.value = result.paymentMethod.id;
+                        form.appendChild(paymentMethodInput);
+
+                        // Now submit the form
+                        if (confirm('Are you sure you want to process this Stripe payment of ₹' + amount.toFixed(2) + '?')) {
+                            form.submit();
+                        }
+                    }
+                });
+
+                return;
+            }
+
+            // For non-Stripe payments, show confirmation
+            if (!confirm('Are you sure you want to process this payment of ₹' + amount.toFixed(2) + '?')) {
+                e.preventDefault();
+            }
+        });
+    }
+
+
+    // Initialize preview
+    updatePreview();
+});
+</script>
+{% endblock %}

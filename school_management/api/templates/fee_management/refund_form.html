@@ -1,0 +1,54 @@
+{% extends "fee_management/base.html" %}
+
+{% block title %}Process Refund{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'fee_admin_dashboard' %}">Fee Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'fee_list' %}">Fees</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Process Refund</li>
+            </ol>
+        </nav>
+        <h2><i class="fas fa-undo"></i> Process Refund</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 mx-auto">
+        <div class="card dashboard-card">
+            <div class="card-header">
+                <h5 class="mb-0">Refund Information</h5>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label for="refund_amount" class="form-label">Refund Amount (₹)</label>
+                        <input type="number" class="form-control" id="refund_amount" name="amount" step="0.01" required>
+                        <div class="form-text">Maximum refundable: ₹{{ payment.amount|floatformat:2 }}</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="refund_reason" class="form-label">Reason for Refund</label>
+                        <textarea class="form-control" id="refund_reason" name="reason" rows="3" required placeholder="Reason for refund..."></textarea>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <strong>Warning:</strong> This action will process a refund and may affect the student's fee status.
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'fee_detail' payment.fee.id %}" class="btn btn-secondary">Cancel</a>
+                        <button type="submit" class="btn btn-warning">Process Refund</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

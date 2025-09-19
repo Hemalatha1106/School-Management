@@ -1,0 +1,170 @@
+"use client"
+
+import React from "react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import {
+  BarChart3,
+  Users,
+  BookOpen,
+  FileText,
+  Clock,
+  Calendar,
+  GraduationCap,
+} from "lucide-react"
+
+interface TeacherSidebarProps {
+  activeTab: string
+  setActiveTab: (tab: string) => void
+}
+
+export default function TeacherSidebar({ activeTab, setActiveTab }: TeacherSidebarProps) {
+  return (
+    <aside className="w-full lg:w-64 lg:flex-shrink-0 animate-slide-up">
+      <Card className="h-full backdrop-blur-sm bg-white/90 dark:bg-slate-800/90 border border-white/60 dark:border-slate-200/20 shadow-xl">
+        <CardHeader className="pb-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-700 rounded-t-lg">
+          <CardTitle className="text-lg font-semibold flex items-center gap-3 text-foreground">
+            <div className="p-2 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg">
+              <BookOpen className="h-5 w-5 text-white" />
+            </div>
+            Teacher Tools
+          </CardTitle>
+          <CardDescription className="text-sm font-medium">
+            Teaching Management
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="p-4">
+          <div className="space-y-2">
+            <Button
+              variant="outline"
+              className="w-full h-12 flex items-center gap-3 justify-start
+                            m-2
+                            bg-white/10 dark:bg-white/5
+                            hover:bg-gradient-to-r hover:from-cyan-50 hover:to-blue-50
+                            dark:hover:from-cyan-900/20 dark:hover:to-blue-900/20
+                            transition-all duration-300 border-2
+                            hover:border-cyan-300 dark:hover:border-cyan-600
+                            font-medium text-black dark:text-white hover:text-black"
+              onClick={() => setActiveTab("dashboard")}
+            >
+              <BarChart3 className="h-4 w-4 text-cyan-600" />
+              <span className="text-sm font-medium">Dashboard</span>
+            </Button>
+
+            <Button
+              variant="outline"
+              className="w-full h-12 flex items-center gap-3 justify-start
+                            m-2
+                            bg-white/10 dark:bg-white/5
+                            hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50
+                            dark:hover:from-blue-900/20 dark:hover:to-purple-900/20
+                            transition-all duration-300 border-2
+                            hover:border-blue-300 dark:hover:border-blue-600
+                            font-medium text-black dark:text-white hover:text-black"
+              onClick={() => setActiveTab("classes")}
+            >
+              <BookOpen className="h-4 w-4 text-blue-600" />
+              <span className="text-sm font-medium">My Classes</span>
+            </Button>
+
+            <Button
+              variant="outline"
+              className="w-full h-12 flex items-center gap-3 justify-start
+                            m-2
+                            bg-white/10 dark:bg-white/5
+                            hover:bg-gradient-to-r hover:from-green-50 hover:to-emerald-50
+                            dark:hover:from-green-900/20 dark:hover:to-emerald-900/20
+                            transition-all duration-300 border-2
+                            hover:border-green-300 dark:hover:border-green-600
+                            font-medium text-black dark:text-white hover:text-black"
+              onClick={() => setActiveTab("students")}
+            >
+              <Users className="h-4 w-4 text-green-600" />
+              <span className="text-sm font-medium">Students</span>
+            </Button>
+
+            <Button
+              variant="outline"
+              className="w-full h-12 flex items-center gap-3 justify-start
+                            m-2
+                            bg-white/10 dark:bg-white/5
+                            hover:bg-gradient-to-r hover:from-teal-50 hover:to-cyan-50
+                            dark:hover:from-teal-900/20 dark:hover:to-cyan-900/20
+                            transition-all duration-300 border-2
+                            hover:border-teal-300 dark:hover:border-teal-600
+                            font-medium text-black dark:text-white hover:text-black"
+              onClick={() => setActiveTab("attendance")}
+            >
+              <Users className="h-4 w-4 text-teal-600" />
+              <span className="text-sm font-medium">Attendance</span>
+            </Button>
+
+            <Button
+              variant="outline"
+              className="w-full h-12 flex items-center gap-3 justify-start
+                            m-2
+                            bg-white/10 dark:bg-white/5
+                            hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50
+                            dark:hover:from-purple-900/20 dark:hover:to-pink-900/20
+                            transition-all duration-300 border-2
+                            hover:border-purple-300 dark:hover:border-purple-600
+                            font-medium text-black dark:text-white hover:text-black"
+              onClick={() => setActiveTab("tasks")}
+            >
+              <Clock className="h-4 w-4 text-purple-600" />
+              <span className="text-sm font-medium">Tasks</span>
+            </Button>
+
+            <Button
+              variant="outline"
+              className="w-full h-12 flex items-center gap-3 justify-start
+                            m-2
+                            bg-white/10 dark:bg-white/5
+                            hover:bg-gradient-to-r hover:from-orange-50 hover:to-yellow-50
+                            dark:hover:from-orange-900/20 dark:hover:to-yellow-900/20
+                            transition-all duration-300 border-2
+                            hover:border-orange-300 dark:hover:border-orange-600
+                            font-medium text-black dark:text-white hover:text-black"
+              onClick={() => setActiveTab("assignments")}
+            >
+              <FileText className="h-4 w-4 text-orange-600" />
+              <span className="text-sm font-medium">Assignments</span>
+            </Button>
+
+            <Button
+              variant="outline"
+              className="w-full h-12 flex items-center gap-3 justify-start
+                            m-2
+                            bg-white/10 dark:bg-white/5
+                            hover:bg-gradient-to-r hover:from-red-50 hover:to-pink-50
+                            dark:hover:from-red-900/20 dark:hover:to-pink-900/20
+                            transition-all duration-300 border-2
+                            hover:border-red-300 dark:hover:border-red-600
+                            font-medium text-black dark:text-white hover:text-black"
+              onClick={() => setActiveTab("leave")}
+            >
+              <Clock className="h-4 w-4 text-red-600" />
+              <span className="text-sm font-medium">Leave</span>
+            </Button>
+
+            <Button
+              variant="outline"
+              className="w-full h-12 flex items-center gap-3 justify-start
+                            m-2
+                            bg-white/10 dark:bg-white/5
+                            hover:bg-gradient-to-r hover:from-indigo-50 hover:to-blue-50
+                            dark:hover:from-indigo-900/20 dark:hover:to-blue-900/20
+                            transition-all duration-300 border-2
+                            hover:border-indigo-300 dark:hover:border-indigo-600
+                            font-medium text-black dark:text-white hover:text-black"
+              onClick={() => setActiveTab("timetable")}
+            >
+              <Calendar className="h-4 w-4 text-indigo-600" />
+              <span className="text-sm font-medium">Schedule</span>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    </aside>
+  )
+}

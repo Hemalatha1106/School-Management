@@ -1,0 +1,160 @@
+{
+  "fee_summary": {
+    "total_amount": "2789000",
+    "paid_amount": "936500",
+    "pending_amount": "1852500"
+  },
+  "fee_status_breakdown": [
+    {
+      "status": "paid",
+      "count": 406,
+      "total_amount": "936500"
+    },
+    {
+      "status": "partial",
+      "count": 436,
+      "total_amount": "954000"
+    },
+    {
+      "status": "unpaid",
+      "count": 417,
+      "total_amount": "898500"
+    }
+  ],
+  "monthly_collection_trend": [
+    {
+      "month": "2025-09",
+      "collected": "336000",
+      "pending": "578000"
+    },
+    {
+      "month": "2025-08",
+      "collected": "309500",
+      "pending": "640500"
+    },
+    {
+      "month": "2025-07",
+      "collected": "133500",
+      "pending": "228500"
+    },
+    {
+      "month": "2025-06",
+      "collected": 0,
+      "pending": 0
+    },
+    {
+      "month": "2025-05",
+      "collected": 0,
+      "pending": 0
+    },
+    {
+      "month": "2025-04",
+      "collected": 0,
+      "pending": 0
+    },
+    {
+      "month": "2025-03",
+      "collected": 0,
+      "pending": 0
+    },
+    {
+      "month": "2025-02",
+      "collected": 0,
+      "pending": 0
+    },
+    {
+      "month": "2025-01",
+      "collected": 0,
+      "pending": 0
+    },
+    {
+      "month": "2024-12",
+      "collected": 0,
+      "pending": 0
+    },
+    {
+      "month": "2024-11",
+      "collected": 0,
+      "pending": 0
+    },
+    {
+      "month": "2024-10",
+      "collected": 0,
+      "pending": 0
+    }
+  ],
+  "class_fee_analysis": [
+    {
+      "student__school_class__name": "Grade 1",
+      "total_fees": "228500",
+      "paid_fees": "74000",
+      "pending_fees": "154500"
+    },
+    {
+      "student__school_class__name": "Grade 10",
+      "total_fees": "247000",
+      "paid_fees": "90000",
+      "pending_fees": "157000"
+    },
+    {
+      "student__school_class__name": "Grade 11",
+      "total_fees": "260500",
+      "paid_fees": "98000",
+      "pending_fees": "162500"
+    },
+    {
+      "student__school_class__name": "Grade 12",
+      "total_fees": "194500",
+      "paid_fees": "67500",
+      "pending_fees": "127000"
+    },
+    {
+      "student__school_class__name": "Grade 2",
+      "total_fees": "251000",
+      "paid_fees": "105000",
+      "pending_fees": "146000"
+    },
+    {
+      "student__school_class__name": "Grade 3",
+      "total_fees": "235000",
+      "paid_fees": "59500",
+      "pending_fees": "175500"
+    },
+    {
+      "student__school_class__name": "Grade 4",
+      "total_fees": "247500",
+      "paid_fees": "79000",
+      "pending_fees": "168500"
+    },
+    {
+      "student__school_class__name": "Grade 5",
+      "total_fees": "271000",
+      "paid_fees": "74500",
+      "pending_fees": "196500"
+    },
+    {
+      "student__school_class__name": "Grade 6",
+      "total_fees": "234000",
+      "paid_fees": "99500",
+      "pending_fees": "134500"
+    },
+    {
+      "student__school_class__name": "Grade 7",
+      "total_fees": "166000",
+      "paid_fees": "52500",
+      "pending_fees": "113500"
+    },
+    {
+      "student__school_class__name": "Grade 8",
+      "total_fees": "206000",
+      "paid_fees": "52500",
+      "pending_fees": "153500"
+    },
+    {
+      "student__school_class__name": "Grade 9",
+      "total_fees": "248000",
+      "paid_fees": "84500",
+      "pending_fees": "163500"
+    }
+  ]
+}

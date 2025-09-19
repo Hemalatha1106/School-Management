@@ -1,0 +1,42 @@
+<!-- api/templates/fees_report.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fees Report</title>
+    <style>
+        body { font-family: sans-serif; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .paid { color: green; }
+        .unpaid { color: orange; }
+        .partial { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>Student Fees Status Report</h1>
+    <p>Generated on: {% now "Y-m-d H:i" %}</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Class</th>
+                <th>Amount Due</th>
+                <th>Due Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for fee in fees %}
+            <tr>
+                <td>{{ fee.student.user.first_name }} {{ fee.student.user.last_name }}</td>
+                <td>{{ fee.student.school_class }}</td>
+                <td>${{ fee.amount }}</td>
+                <td>{{ fee.due_date }}</td>
+                <td class="{{ fee.status }}">{{ fee.get_status_display }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

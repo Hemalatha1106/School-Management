@@ -1,0 +1,26 @@
+{
+  "overall_statistics": {
+    "total_students": 359,
+    "total_teachers": 16,
+    "total_classes": 17,
+    "total_fees": 1259,
+    "total_paid_fees": 406,
+    "total_pending_fees": 853,
+    "total_attendance_records": 4248,
+    "total_assignments": 49,
+    "total_grades": 1464,
+    "total_tasks": 47,
+    "pending_leaves": 0
+  },
+  "recent_activity": {
+    "new_students": 359,
+    "new_fees": 987,
+    "new_assignments": 49,
+    "completed_tasks": 2
+  },
+  "system_health": {
+    "database_status": "healthy",
+    "last_backup": "2025-09-09T12:04:57.774918+00:00",
+    "active_users": 376
+  }
+}

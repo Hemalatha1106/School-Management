@@ -1,0 +1,14 @@
+{
+  "report_id": "report_20250917_040748",
+  "generated_at": "2025-09-17T04:07:48.958756+00:00",
+  "report_type": "academic",
+  "version": "1.0",
+  "generator": "School Management System",
+  "includes": {
+    "academic": true,
+    "financial": false,
+    "attendance": false,
+    "performance": false,
+    "summary": true
+  }
+}

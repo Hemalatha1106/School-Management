@@ -1,0 +1,259 @@
+{% extends "fee_management/base.html" %}
+
+{% block title %}{% if form.instance.pk %}Edit Fee{% else %}Add New Fee{% endif %}{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'fee_admin_dashboard' %}">Fee Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    {% if form.instance.pk %}Edit Fee{% else %}Add New Fee{% endif %}
+                </li>
+            </ol>
+        </nav>
+        <h2>
+            <i class="fas fa-{% if form.instance.pk %}edit{% else %}plus{% endif %}"></i>
+            {% if form.instance.pk %}Edit Fee{% else %}Add New Fee{% endif %}
+        </h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <div class="card dashboard-card">
+            <div class="card-header">
+                <h5 class="mb-0">Fee Information</h5>
+            </div>
+            <div class="card-body">
+                <form method="post" class="fee-form">
+                    {% csrf_token %}
+
+                    <!-- Student Selection -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="{{ form.student.id_for_label }}" class="form-label">
+                                <i class="fas fa-user"></i> Student <span class="text-danger">*</span>
+                            </label>
+                            {{ form.student }}
+                            {% if form.student.errors %}
+                                <div class="text-danger small">
+                                    {% for error in form.student.errors %}{{ error }}{% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-6">
+                            <label for="{{ form.fee_type.id_for_label }}" class="form-label">
+                                <i class="fas fa-tag"></i> Fee Type <span class="text-danger">*</span>
+                            </label>
+                            {{ form.fee_type }}
+                            {% if form.fee_type.errors %}
+                                <div class="text-danger small">
+                                    {% for error in form.fee_type.errors %}{{ error }}{% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Amount and Due Date -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="{{ form.amount.id_for_label }}" class="form-label">
+                                <i class="fas fa-rupee-sign"></i> Amount (₹) <span class="text-danger">*</span>
+                            </label>
+                            <div class="input-group">
+                                <span class="input-group-text">₹</span>
+                                {{ form.amount }}
+                            </div>
+                            {% if form.amount.errors %}
+                                <div class="text-danger small">
+                                    {% for error in form.amount.errors %}{{ error }}{% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-6">
+                            <label for="{{ form.due_date.id_for_label }}" class="form-label">
+                                <i class="fas fa-calendar"></i> Due Date <span class="text-danger">*</span>
+                            </label>
+                            {{ form.due_date }}
+                            {% if form.due_date.errors %}
+                                <div class="text-danger small">
+                                    {% for error in form.due_date.errors %}{{ error }}{% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Status and Description -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="{{ form.status.id_for_label }}" class="form-label">
+                                <i class="fas fa-info-circle"></i> Status
+                            </label>
+                            {{ form.status }}
+                            {% if form.status.errors %}
+                                <div class="text-danger small">
+                                    {% for error in form.status.errors %}{{ error }}{% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-6">
+                            <label for="{{ form.waived_amount.id_for_label }}" class="form-label">
+                                <i class="fas fa-percentage"></i> Waived Amount (₹)
+                            </label>
+                            <div class="input-group">
+                                <span class="input-group-text">₹</span>
+                                {{ form.waived_amount }}
+                            </div>
+                            {% if form.waived_amount.errors %}
+                                <div class="text-danger small">
+                                    {% for error in form.waived_amount.errors %}{{ error }}{% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Notes -->
+                    <div class="mb-3">
+                        <label for="{{ form.notes.id_for_label }}" class="form-label">
+                            <i class="fas fa-sticky-note"></i> Notes
+                        </label>
+                        {{ form.notes }}
+                        {% if form.notes.errors %}
+                            <div class="text-danger small">
+                                {% for error in form.notes.errors %}{{ error }}{% endfor %}
+                            </div>
+                        {% endif %}
+                        <div class="form-text">Optional notes about this fee</div>
+                    </div>
+
+                    <!-- Hidden Fields -->
+                    {% if form.instance.pk %}
+                        {{ form.id }}
+                    {% endif %}
+
+                    <!-- Form Actions -->
+                    <div class="d-flex justify-content-between mt-4">
+                        <a href="{% url 'fee_list' %}" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Cancel
+                        </a>
+                        <div>
+                            {% if form.instance.pk %}
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i> Update Fee
+                                </button>
+                            {% else %}
+                                <button type="submit" class="btn btn-success">
+                                    <i class="fas fa-plus"></i> Create Fee
+                                </button>
+                            {% endif %}
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Fee Preview (for new fees) -->
+        {% if not form.instance.pk %}
+        <div class="card dashboard-card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-eye"></i> Fee Preview</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Student Details</h6>
+                        <p id="preview-student">Select a student to see details</p>
+                        <p id="preview-class" class="text-muted small"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Fee Summary</h6>
+                        <p id="preview-fee-type">Select fee type</p>
+                        <p id="preview-amount" class="text-success fw-bold">₹0.00</p>
+                        <p id="preview-due-date">Select due date</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Form validation and preview
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.fee-form');
+    const studentSelect = document.getElementById('id_student');
+    const feeTypeSelect = document.getElementById('id_fee_type');
+    const amountInput = document.getElementById('id_amount');
+    const dueDateInput = document.getElementById('id_due_date');
+
+    // Preview updates
+    function updatePreview() {
+        const previewStudent = document.getElementById('preview-student');
+        const previewFeeType = document.getElementById('preview-fee-type');
+        const previewAmount = document.getElementById('preview-amount');
+        const previewDueDate = document.getElementById('preview-due-date');
+
+        if (previewStudent && studentSelect && studentSelect.options[studentSelect.selectedIndex]) {
+            const selectedStudent = studentSelect.options[studentSelect.selectedIndex];
+            if (selectedStudent.value) {
+                previewStudent.textContent = selectedStudent.text;
+            }
+        }
+
+        if (previewFeeType && feeTypeSelect && feeTypeSelect.options[feeTypeSelect.selectedIndex]) {
+            const selectedFeeType = feeTypeSelect.options[feeTypeSelect.selectedIndex];
+            if (selectedFeeType.value) {
+                previewFeeType.textContent = selectedFeeType.text;
+            }
+        }
+
+        if (previewAmount && amountInput && amountInput.value) {
+            previewAmount.textContent = '₹' + parseFloat(amountInput.value).toFixed(2);
+        }
+
+        if (previewDueDate && dueDateInput && dueDateInput.value) {
+            const date = new Date(dueDateInput.value);
+            previewDueDate.textContent = 'Due: ' + date.toLocaleDateString();
+        }
+    }
+
+    // Add event listeners
+    if (studentSelect) studentSelect.addEventListener('change', updatePreview);
+    if (feeTypeSelect) feeTypeSelect.addEventListener('change', updatePreview);
+    if (amountInput) amountInput.addEventListener('input', updatePreview);
+    if (dueDateInput) dueDateInput.addEventListener('change', updatePreview);
+
+    // Form validation
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            let isValid = true;
+            const requiredFields = ['id_student', 'id_fee_type', 'id_amount', 'id_due_date'];
+
+            requiredFields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                if (field && !field.value.trim()) {
+                    field.classList.add('is-invalid');
+                    isValid = false;
+                } else if (field) {
+                    field.classList.remove('is-invalid');
+                }
+            });
+
+            if (!isValid) {
+                e.preventDefault();
+                alert('Please fill in all required fields.');
+            }
+        });
+    }
+
+    // Initialize preview
+    updatePreview();
+});
+</script>
+{% endblock %}

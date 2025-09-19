@@ -1,0 +1,2723 @@
+{
+  "student_enrollment": [
+    {
+      "user__first_name": "Larry",
+      "user__last_name": "Bright",
+      "user__username": "student1",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:34.656612+00:00"
+    },
+    {
+      "user__first_name": "Shirley",
+      "user__last_name": "Gamble",
+      "user__username": "student2",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:35.011666+00:00"
+    },
+    {
+      "user__first_name": "Jeremy",
+      "user__last_name": "Greene",
+      "user__username": "student3",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:35.268591+00:00"
+    },
+    {
+      "user__first_name": "Mitchell",
+      "user__last_name": "Craig",
+      "user__username": "student4",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:35.574108+00:00"
+    },
+    {
+      "user__first_name": "Mary",
+      "user__last_name": "Owens",
+      "user__username": "student5",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:35.989616+00:00"
+    },
+    {
+      "user__first_name": "Mary",
+      "user__last_name": "Johnson",
+      "user__username": "student6",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:36.308434+00:00"
+    },
+    {
+      "user__first_name": "Michele",
+      "user__last_name": "Schultz",
+      "user__username": "student7",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:36.586304+00:00"
+    },
+    {
+      "user__first_name": "Laura",
+      "user__last_name": "Meadows",
+      "user__username": "student8",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:36.853131+00:00"
+    },
+    {
+      "user__first_name": "Sharon",
+      "user__last_name": "Levy",
+      "user__username": "student9",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:37.113514+00:00"
+    },
+    {
+      "user__first_name": "Michelle",
+      "user__last_name": "Kirby",
+      "user__username": "student10",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:37.381610+00:00"
+    },
+    {
+      "user__first_name": "Perry",
+      "user__last_name": "Hawkins",
+      "user__username": "student11",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:37.636768+00:00"
+    },
+    {
+      "user__first_name": "Tyler",
+      "user__last_name": "Hall",
+      "user__username": "student12",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:37.878181+00:00"
+    },
+    {
+      "user__first_name": "Susan",
+      "user__last_name": "Shea",
+      "user__username": "student13",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:38.115544+00:00"
+    },
+    {
+      "user__first_name": "Angela",
+      "user__last_name": "Kennedy",
+      "user__username": "student14",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:38.364229+00:00"
+    },
+    {
+      "user__first_name": "Marcus",
+      "user__last_name": "Everett",
+      "user__username": "student15",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:38.607128+00:00"
+    },
+    {
+      "user__first_name": "Ryan",
+      "user__last_name": "Tucker",
+      "user__username": "student16",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:38.859791+00:00"
+    },
+    {
+      "user__first_name": "Ralph",
+      "user__last_name": "Miller",
+      "user__username": "student17",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:39.106605+00:00"
+    },
+    {
+      "user__first_name": "Brandon",
+      "user__last_name": "Burns",
+      "user__username": "student18",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:39.352230+00:00"
+    },
+    {
+      "user__first_name": "David",
+      "user__last_name": "Costa",
+      "user__username": "student19",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:39.603323+00:00"
+    },
+    {
+      "user__first_name": "William",
+      "user__last_name": "Ryan",
+      "user__username": "student20",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:39.844353+00:00"
+    },
+    {
+      "user__first_name": "Michael",
+      "user__last_name": "Marquez",
+      "user__username": "student21",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:40.100481+00:00"
+    },
+    {
+      "user__first_name": "Manuel",
+      "user__last_name": "Jackson",
+      "user__username": "student22",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:40.343823+00:00"
+    },
+    {
+      "user__first_name": "Stanley",
+      "user__last_name": "Rocha",
+      "user__username": "student23",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:40.591969+00:00"
+    },
+    {
+      "user__first_name": "Cindy",
+      "user__last_name": "Wise",
+      "user__username": "student24",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:40.837342+00:00"
+    },
+    {
+      "user__first_name": "Eric",
+      "user__last_name": "Nunez",
+      "user__username": "student25",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:41.094828+00:00"
+    },
+    {
+      "user__first_name": "Timothy",
+      "user__last_name": "Suarez",
+      "user__username": "student26",
+      "school_class__name": "Grade 1",
+      "user__date_joined": "2025-09-04 06:47:41.344092+00:00"
+    },
+    {
+      "user__first_name": "Brandon",
+      "user__last_name": "Jensen",
+      "user__username": "student27",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:41.586014+00:00"
+    },
+    {
+      "user__first_name": "Holly",
+      "user__last_name": "Hodge",
+      "user__username": "student28",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:41.843013+00:00"
+    },
+    {
+      "user__first_name": "Susan",
+      "user__last_name": "Singh",
+      "user__username": "student29",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:42.094308+00:00"
+    },
+    {
+      "user__first_name": "Michael",
+      "user__last_name": "Marshall",
+      "user__username": "student30",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:42.339901+00:00"
+    },
+    {
+      "user__first_name": "Jesse",
+      "user__last_name": "Fitzgerald",
+      "user__username": "student31",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:42.583478+00:00"
+    },
+    {
+      "user__first_name": "Nicole",
+      "user__last_name": "Blankenship",
+      "user__username": "student32",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:42.823675+00:00"
+    },
+    {
+      "user__first_name": "Samantha",
+      "user__last_name": "Kerr",
+      "user__username": "student33",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:43.065870+00:00"
+    },
+    {
+      "user__first_name": "Tiffany",
+      "user__last_name": "Sanders",
+      "user__username": "student34",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:43.314815+00:00"
+    },
+    {
+      "user__first_name": "John",
+      "user__last_name": "Thompson",
+      "user__username": "student35",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:43.565440+00:00"
+    },
+    {
+      "user__first_name": "Dawn",
+      "user__last_name": "Fox",
+      "user__username": "student36",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:43.808868+00:00"
+    },
+    {
+      "user__first_name": "Destiny",
+      "user__last_name": "Ball",
+      "user__username": "student37",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:44.093665+00:00"
+    },
+    {
+      "user__first_name": "Larry",
+      "user__last_name": "Griffith",
+      "user__username": "student38",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:44.356154+00:00"
+    },
+    {
+      "user__first_name": "Joseph",
+      "user__last_name": "Flores",
+      "user__username": "student39",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:44.635973+00:00"
+    },
+    {
+      "user__first_name": "Megan",
+      "user__last_name": "Miller",
+      "user__username": "student40",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:44.942404+00:00"
+    },
+    {
+      "user__first_name": "Heather",
+      "user__last_name": "Erickson",
+      "user__username": "student41",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:45.216389+00:00"
+    },
+    {
+      "user__first_name": "Jennifer",
+      "user__last_name": "Jones",
+      "user__username": "student42",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:45.476923+00:00"
+    },
+    {
+      "user__first_name": "Marcus",
+      "user__last_name": "Wade",
+      "user__username": "student43",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:45.736128+00:00"
+    },
+    {
+      "user__first_name": "Linda",
+      "user__last_name": "Young",
+      "user__username": "student44",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:46.009089+00:00"
+    },
+    {
+      "user__first_name": "George",
+      "user__last_name": "Burke",
+      "user__username": "student45",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:46.277491+00:00"
+    },
+    {
+      "user__first_name": "Ann",
+      "user__last_name": "Maynard",
+      "user__username": "student46",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:46.539885+00:00"
+    },
+    {
+      "user__first_name": "Robert",
+      "user__last_name": "Howard",
+      "user__username": "student47",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:46.811161+00:00"
+    },
+    {
+      "user__first_name": "Dale",
+      "user__last_name": "Medina",
+      "user__username": "student48",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:47.081777+00:00"
+    },
+    {
+      "user__first_name": "Kathleen",
+      "user__last_name": "Bennett",
+      "user__username": "student49",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:47.348870+00:00"
+    },
+    {
+      "user__first_name": "John",
+      "user__last_name": "Cooper",
+      "user__username": "student50",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:47.601591+00:00"
+    },
+    {
+      "user__first_name": "Teresa",
+      "user__last_name": "Burton",
+      "user__username": "student51",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:47.844404+00:00"
+    },
+    {
+      "user__first_name": "Tommy",
+      "user__last_name": "Gould",
+      "user__username": "student52",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:48.095695+00:00"
+    },
+    {
+      "user__first_name": "Alyssa",
+      "user__last_name": "Sexton",
+      "user__username": "student53",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:48.337820+00:00"
+    },
+    {
+      "user__first_name": "Brittany",
+      "user__last_name": "Harvey",
+      "user__username": "student54",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:48.596679+00:00"
+    },
+    {
+      "user__first_name": "Brian",
+      "user__last_name": "Hendricks",
+      "user__username": "student55",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:48.847341+00:00"
+    },
+    {
+      "user__first_name": "Darryl",
+      "user__last_name": "Mcconnell",
+      "user__username": "student56",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:49.089821+00:00"
+    },
+    {
+      "user__first_name": "Catherine",
+      "user__last_name": "Davidson",
+      "user__username": "student57",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:49.346344+00:00"
+    },
+    {
+      "user__first_name": "Phillip",
+      "user__last_name": "Gomez",
+      "user__username": "student58",
+      "school_class__name": "Grade 2",
+      "user__date_joined": "2025-09-04 06:47:49.595360+00:00"
+    },
+    {
+      "user__first_name": "Alice",
+      "user__last_name": "Hall",
+      "user__username": "student59",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:49.848131+00:00"
+    },
+    {
+      "user__first_name": "Brooke",
+      "user__last_name": "Perry",
+      "user__username": "student60",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:50.099857+00:00"
+    },
+    {
+      "user__first_name": "Alicia",
+      "user__last_name": "Tran",
+      "user__username": "student61",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:50.345375+00:00"
+    },
+    {
+      "user__first_name": "Carla",
+      "user__last_name": "Dillon",
+      "user__username": "student62",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:50.600055+00:00"
+    },
+    {
+      "user__first_name": "Laura",
+      "user__last_name": "Young",
+      "user__username": "student63",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:50.856861+00:00"
+    },
+    {
+      "user__first_name": "Benjamin",
+      "user__last_name": "Santiago",
+      "user__username": "student64",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:51.137620+00:00"
+    },
+    {
+      "user__first_name": "Amanda",
+      "user__last_name": "Brown",
+      "user__username": "student65",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:51.404326+00:00"
+    },
+    {
+      "user__first_name": "Noah",
+      "user__last_name": "Roberts",
+      "user__username": "student66",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:51.657148+00:00"
+    },
+    {
+      "user__first_name": "Chelsea",
+      "user__last_name": "Hood",
+      "user__username": "student67",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:51.924572+00:00"
+    },
+    {
+      "user__first_name": "Debra",
+      "user__last_name": "Jones",
+      "user__username": "student68",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:52.185649+00:00"
+    },
+    {
+      "user__first_name": "Mark",
+      "user__last_name": "Cochran",
+      "user__username": "student69",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:52.461090+00:00"
+    },
+    {
+      "user__first_name": "Amy",
+      "user__last_name": "Kemp",
+      "user__username": "student70",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:52.713396+00:00"
+    },
+    {
+      "user__first_name": "Joseph",
+      "user__last_name": "Collins",
+      "user__username": "student71",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:52.982550+00:00"
+    },
+    {
+      "user__first_name": "Stephanie",
+      "user__last_name": "Mejia",
+      "user__username": "student72",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:53.276373+00:00"
+    },
+    {
+      "user__first_name": "Brooke",
+      "user__last_name": "Michael",
+      "user__username": "student73",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:53.567045+00:00"
+    },
+    {
+      "user__first_name": "Lauren",
+      "user__last_name": "Johnston",
+      "user__username": "student74",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:53.828684+00:00"
+    },
+    {
+      "user__first_name": "Danielle",
+      "user__last_name": "Patterson",
+      "user__username": "student75",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:54.086585+00:00"
+    },
+    {
+      "user__first_name": "Cassie",
+      "user__last_name": "Reynolds",
+      "user__username": "student76",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:54.380771+00:00"
+    },
+    {
+      "user__first_name": "Lisa",
+      "user__last_name": "Robles",
+      "user__username": "student77",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:54.622093+00:00"
+    },
+    {
+      "user__first_name": "Alejandro",
+      "user__last_name": "Lowery",
+      "user__username": "student78",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:54.901210+00:00"
+    },
+    {
+      "user__first_name": "Lauren",
+      "user__last_name": "Hill",
+      "user__username": "student79",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:55.164935+00:00"
+    },
+    {
+      "user__first_name": "Tyler",
+      "user__last_name": "Rangel",
+      "user__username": "student80",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:55.432859+00:00"
+    },
+    {
+      "user__first_name": "Angela",
+      "user__last_name": "Daniel",
+      "user__username": "student81",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:55.705158+00:00"
+    },
+    {
+      "user__first_name": "Faith",
+      "user__last_name": "Dean",
+      "user__username": "student82",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:55.980337+00:00"
+    },
+    {
+      "user__first_name": "Lisa",
+      "user__last_name": "Potter",
+      "user__username": "student83",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:56.253477+00:00"
+    },
+    {
+      "user__first_name": "Dakota",
+      "user__last_name": "Malone",
+      "user__username": "student84",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:56.518272+00:00"
+    },
+    {
+      "user__first_name": "William",
+      "user__last_name": "Garcia",
+      "user__username": "student85",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:56.801443+00:00"
+    },
+    {
+      "user__first_name": "Laura",
+      "user__last_name": "Montgomery",
+      "user__username": "student86",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:57.095448+00:00"
+    },
+    {
+      "user__first_name": "Rebekah",
+      "user__last_name": "Khan",
+      "user__username": "student87",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:57.376824+00:00"
+    },
+    {
+      "user__first_name": "Richard",
+      "user__last_name": "Thornton",
+      "user__username": "student88",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:57.624780+00:00"
+    },
+    {
+      "user__first_name": "Caitlyn",
+      "user__last_name": "Chen",
+      "user__username": "student89",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:57.888209+00:00"
+    },
+    {
+      "user__first_name": "Joseph",
+      "user__last_name": "Norman",
+      "user__username": "student90",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:58.161518+00:00"
+    },
+    {
+      "user__first_name": "Kenneth",
+      "user__last_name": "Cervantes",
+      "user__username": "student91",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:58.431587+00:00"
+    },
+    {
+      "user__first_name": "Joe",
+      "user__last_name": "Mcdonald",
+      "user__username": "student92",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:58.733861+00:00"
+    },
+    {
+      "user__first_name": "Cheryl",
+      "user__last_name": "Potter",
+      "user__username": "student93",
+      "school_class__name": "Grade 3",
+      "user__date_joined": "2025-09-04 06:47:59.005441+00:00"
+    },
+    {
+      "user__first_name": "Jason",
+      "user__last_name": "Brown",
+      "user__username": "student94",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:47:59.301213+00:00"
+    },
+    {
+      "user__first_name": "Shelby",
+      "user__last_name": "Lewis",
+      "user__username": "student95",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:47:59.616222+00:00"
+    },
+    {
+      "user__first_name": "Amy",
+      "user__last_name": "Nelson",
+      "user__username": "student96",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:47:59.893200+00:00"
+    },
+    {
+      "user__first_name": "Nicole",
+      "user__last_name": "Chandler",
+      "user__username": "student97",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:00.162956+00:00"
+    },
+    {
+      "user__first_name": "Ashley",
+      "user__last_name": "White",
+      "user__username": "student98",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:00.441986+00:00"
+    },
+    {
+      "user__first_name": "Benjamin",
+      "user__last_name": "Green",
+      "user__username": "student99",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:00.714721+00:00"
+    },
+    {
+      "user__first_name": "Julia",
+      "user__last_name": "Hall",
+      "user__username": "student100",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:00.985641+00:00"
+    },
+    {
+      "user__first_name": "Megan",
+      "user__last_name": "Strickland",
+      "user__username": "student101",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:01.236700+00:00"
+    },
+    {
+      "user__first_name": "Diana",
+      "user__last_name": "Hall",
+      "user__username": "student102",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:01.487551+00:00"
+    },
+    {
+      "user__first_name": "Alicia",
+      "user__last_name": "Robertson",
+      "user__username": "student103",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:01.762058+00:00"
+    },
+    {
+      "user__first_name": "Kristy",
+      "user__last_name": "Roberts",
+      "user__username": "student104",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:02.040087+00:00"
+    },
+    {
+      "user__first_name": "Ann",
+      "user__last_name": "Lynch",
+      "user__username": "student105",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:02.323858+00:00"
+    },
+    {
+      "user__first_name": "Mark",
+      "user__last_name": "Gregory",
+      "user__username": "student106",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:02.581011+00:00"
+    },
+    {
+      "user__first_name": "Meredith",
+      "user__last_name": "Cook",
+      "user__username": "student107",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:02.841810+00:00"
+    },
+    {
+      "user__first_name": "Dylan",
+      "user__last_name": "Herrera",
+      "user__username": "student108",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:03.095163+00:00"
+    },
+    {
+      "user__first_name": "David",
+      "user__last_name": "Chen",
+      "user__username": "student109",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:03.375023+00:00"
+    },
+    {
+      "user__first_name": "James",
+      "user__last_name": "Morgan",
+      "user__username": "student110",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:03.670857+00:00"
+    },
+    {
+      "user__first_name": "Melissa",
+      "user__last_name": "Knapp",
+      "user__username": "student111",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:03.925961+00:00"
+    },
+    {
+      "user__first_name": "April",
+      "user__last_name": "Gross",
+      "user__username": "student112",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:04.200547+00:00"
+    },
+    {
+      "user__first_name": "Deborah",
+      "user__last_name": "Cole",
+      "user__username": "student113",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:04.463109+00:00"
+    },
+    {
+      "user__first_name": "Tammy",
+      "user__last_name": "Bailey",
+      "user__username": "student114",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:04.765081+00:00"
+    },
+    {
+      "user__first_name": "Sheila",
+      "user__last_name": "Howard",
+      "user__username": "student115",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:05.037523+00:00"
+    },
+    {
+      "user__first_name": "Michael",
+      "user__last_name": "Sanchez",
+      "user__username": "student116",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:05.295575+00:00"
+    },
+    {
+      "user__first_name": "Michael",
+      "user__last_name": "Russell",
+      "user__username": "student117",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:05.549532+00:00"
+    },
+    {
+      "user__first_name": "Ruth",
+      "user__last_name": "Clements",
+      "user__username": "student118",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:05.820146+00:00"
+    },
+    {
+      "user__first_name": "Crystal",
+      "user__last_name": "Valdez",
+      "user__username": "student119",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:06.074873+00:00"
+    },
+    {
+      "user__first_name": "Veronica",
+      "user__last_name": "Baldwin",
+      "user__username": "student120",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:06.350172+00:00"
+    },
+    {
+      "user__first_name": "Jennifer",
+      "user__last_name": "Andersen",
+      "user__username": "student121",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:06.614600+00:00"
+    },
+    {
+      "user__first_name": "Brenda",
+      "user__last_name": "Armstrong",
+      "user__username": "student122",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:06.865342+00:00"
+    },
+    {
+      "user__first_name": "William",
+      "user__last_name": "Mooney",
+      "user__username": "student123",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:07.134450+00:00"
+    },
+    {
+      "user__first_name": "Brent",
+      "user__last_name": "Austin",
+      "user__username": "student124",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:07.376686+00:00"
+    },
+    {
+      "user__first_name": "Melissa",
+      "user__last_name": "Reyes",
+      "user__username": "student125",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:07.641240+00:00"
+    },
+    {
+      "user__first_name": "Shannon",
+      "user__last_name": "Morales",
+      "user__username": "student126",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:07.906120+00:00"
+    },
+    {
+      "user__first_name": "Katrina",
+      "user__last_name": "Hodge",
+      "user__username": "student127",
+      "school_class__name": "Grade 4",
+      "user__date_joined": "2025-09-04 06:48:08.179674+00:00"
+    },
+    {
+      "user__first_name": "Daniel",
+      "user__last_name": "Greene",
+      "user__username": "student128",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:09.010297+00:00"
+    },
+    {
+      "user__first_name": "Gabrielle",
+      "user__last_name": "Baker",
+      "user__username": "student129",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:09.883118+00:00"
+    },
+    {
+      "user__first_name": "John",
+      "user__last_name": "Pena",
+      "user__username": "student130",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:10.627127+00:00"
+    },
+    {
+      "user__first_name": "Hailey",
+      "user__last_name": "Anderson",
+      "user__username": "student131",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:11.326801+00:00"
+    },
+    {
+      "user__first_name": "Heidi",
+      "user__last_name": "Gonzalez",
+      "user__username": "student132",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:11.794087+00:00"
+    },
+    {
+      "user__first_name": "James",
+      "user__last_name": "Brooks",
+      "user__username": "student133",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:12.091341+00:00"
+    },
+    {
+      "user__first_name": "Morgan",
+      "user__last_name": "Bryant",
+      "user__username": "student134",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:12.377054+00:00"
+    },
+    {
+      "user__first_name": "Christopher",
+      "user__last_name": "Bell",
+      "user__username": "student135",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:12.662443+00:00"
+    },
+    {
+      "user__first_name": "James",
+      "user__last_name": "Boyd",
+      "user__username": "student136",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:12.930000+00:00"
+    },
+    {
+      "user__first_name": "Anna",
+      "user__last_name": "Smith",
+      "user__username": "student137",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:13.213819+00:00"
+    },
+    {
+      "user__first_name": "Heather",
+      "user__last_name": "Mejia",
+      "user__username": "student138",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:13.475846+00:00"
+    },
+    {
+      "user__first_name": "Daniel",
+      "user__last_name": "Mclaughlin",
+      "user__username": "student139",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:13.760806+00:00"
+    },
+    {
+      "user__first_name": "Christopher",
+      "user__last_name": "Willis",
+      "user__username": "student140",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:14.029931+00:00"
+    },
+    {
+      "user__first_name": "Bonnie",
+      "user__last_name": "Adams",
+      "user__username": "student141",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:14.330723+00:00"
+    },
+    {
+      "user__first_name": "Elizabeth",
+      "user__last_name": "Graham",
+      "user__username": "student142",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:14.588129+00:00"
+    },
+    {
+      "user__first_name": "Dawn",
+      "user__last_name": "Green",
+      "user__username": "student143",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:14.895709+00:00"
+    },
+    {
+      "user__first_name": "Crystal",
+      "user__last_name": "Parker",
+      "user__username": "student144",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:15.174235+00:00"
+    },
+    {
+      "user__first_name": "Paul",
+      "user__last_name": "Lutz",
+      "user__username": "student145",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:15.421803+00:00"
+    },
+    {
+      "user__first_name": "Tanya",
+      "user__last_name": "Hendricks",
+      "user__username": "student146",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:15.669949+00:00"
+    },
+    {
+      "user__first_name": "Johnny",
+      "user__last_name": "Payne",
+      "user__username": "student147",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:15.939897+00:00"
+    },
+    {
+      "user__first_name": "Shannon",
+      "user__last_name": "Flores",
+      "user__username": "student148",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:16.198003+00:00"
+    },
+    {
+      "user__first_name": "Alexandria",
+      "user__last_name": "Duncan",
+      "user__username": "student149",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:16.462355+00:00"
+    },
+    {
+      "user__first_name": "Olivia",
+      "user__last_name": "Carson",
+      "user__username": "student150",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:16.718754+00:00"
+    },
+    {
+      "user__first_name": "David",
+      "user__last_name": "Jones",
+      "user__username": "student151",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:16.972917+00:00"
+    },
+    {
+      "user__first_name": "Michael",
+      "user__last_name": "Cox",
+      "user__username": "student152",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:17.206370+00:00"
+    },
+    {
+      "user__first_name": "Christina",
+      "user__last_name": "Anthony",
+      "user__username": "student153",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:17.456126+00:00"
+    },
+    {
+      "user__first_name": "Rebecca",
+      "user__last_name": "Meadows",
+      "user__username": "student154",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:17.760545+00:00"
+    },
+    {
+      "user__first_name": "Larry",
+      "user__last_name": "Mendoza",
+      "user__username": "student155",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:18.017814+00:00"
+    },
+    {
+      "user__first_name": "Melissa",
+      "user__last_name": "Smith",
+      "user__username": "student156",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:18.274422+00:00"
+    },
+    {
+      "user__first_name": "James",
+      "user__last_name": "Flynn",
+      "user__username": "student157",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:18.530605+00:00"
+    },
+    {
+      "user__first_name": "Timothy",
+      "user__last_name": "Baldwin",
+      "user__username": "student158",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:18.815630+00:00"
+    },
+    {
+      "user__first_name": "Christian",
+      "user__last_name": "Griffith",
+      "user__username": "student159",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:19.086896+00:00"
+    },
+    {
+      "user__first_name": "Rebecca",
+      "user__last_name": "Walker",
+      "user__username": "student160",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:19.338505+00:00"
+    },
+    {
+      "user__first_name": "Linda",
+      "user__last_name": "Martin",
+      "user__username": "student161",
+      "school_class__name": "Grade 5",
+      "user__date_joined": "2025-09-04 06:48:19.603019+00:00"
+    },
+    {
+      "user__first_name": "Kaylee",
+      "user__last_name": "Roberts",
+      "user__username": "student162",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:19.878198+00:00"
+    },
+    {
+      "user__first_name": "Mark",
+      "user__last_name": "Williams",
+      "user__username": "student163",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:20.155519+00:00"
+    },
+    {
+      "user__first_name": "Robert",
+      "user__last_name": "Moon",
+      "user__username": "student164",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:20.424710+00:00"
+    },
+    {
+      "user__first_name": "Jennifer",
+      "user__last_name": "Wheeler",
+      "user__username": "student165",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:20.691633+00:00"
+    },
+    {
+      "user__first_name": "Audrey",
+      "user__last_name": "Perry",
+      "user__username": "student166",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:20.954555+00:00"
+    },
+    {
+      "user__first_name": "Nicholas",
+      "user__last_name": "Martin",
+      "user__username": "student167",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:21.235178+00:00"
+    },
+    {
+      "user__first_name": "Christine",
+      "user__last_name": "Figueroa",
+      "user__username": "student168",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:21.482781+00:00"
+    },
+    {
+      "user__first_name": "Omar",
+      "user__last_name": "Murphy",
+      "user__username": "student169",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:21.726937+00:00"
+    },
+    {
+      "user__first_name": "Crystal",
+      "user__last_name": "Hicks",
+      "user__username": "student170",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:21.982199+00:00"
+    },
+    {
+      "user__first_name": "Jason",
+      "user__last_name": "Diaz",
+      "user__username": "student171",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:22.261067+00:00"
+    },
+    {
+      "user__first_name": "Elizabeth",
+      "user__last_name": "Palmer",
+      "user__username": "student172",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:22.523274+00:00"
+    },
+    {
+      "user__first_name": "Richard",
+      "user__last_name": "Barber",
+      "user__username": "student173",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:22.823296+00:00"
+    },
+    {
+      "user__first_name": "Michelle",
+      "user__last_name": "Wilson",
+      "user__username": "student174",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:23.098623+00:00"
+    },
+    {
+      "user__first_name": "Caitlin",
+      "user__last_name": "Cortez",
+      "user__username": "student175",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:23.365086+00:00"
+    },
+    {
+      "user__first_name": "Randy",
+      "user__last_name": "Matthews",
+      "user__username": "student176",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:23.614827+00:00"
+    },
+    {
+      "user__first_name": "Dennis",
+      "user__last_name": "Herring",
+      "user__username": "student177",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:23.868446+00:00"
+    },
+    {
+      "user__first_name": "Holly",
+      "user__last_name": "Garcia",
+      "user__username": "student178",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:24.126090+00:00"
+    },
+    {
+      "user__first_name": "Sandy",
+      "user__last_name": "Leach",
+      "user__username": "student179",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:24.388567+00:00"
+    },
+    {
+      "user__first_name": "Veronica",
+      "user__last_name": "Mcconnell",
+      "user__username": "student180",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:24.630216+00:00"
+    },
+    {
+      "user__first_name": "Robert",
+      "user__last_name": "Coffey",
+      "user__username": "student181",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:24.885124+00:00"
+    },
+    {
+      "user__first_name": "Stephanie",
+      "user__last_name": "Tucker",
+      "user__username": "student182",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:25.149018+00:00"
+    },
+    {
+      "user__first_name": "Laura",
+      "user__last_name": "Buck",
+      "user__username": "student183",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:25.386614+00:00"
+    },
+    {
+      "user__first_name": "David",
+      "user__last_name": "Douglas",
+      "user__username": "student184",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:25.633835+00:00"
+    },
+    {
+      "user__first_name": "Sean",
+      "user__last_name": "Mann",
+      "user__username": "student185",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:25.884094+00:00"
+    },
+    {
+      "user__first_name": "Kenneth",
+      "user__last_name": "Carter",
+      "user__username": "student186",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:26.140371+00:00"
+    },
+    {
+      "user__first_name": "Colton",
+      "user__last_name": "Garner",
+      "user__username": "student187",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:26.394748+00:00"
+    },
+    {
+      "user__first_name": "Paula",
+      "user__last_name": "Williams",
+      "user__username": "student188",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:26.639893+00:00"
+    },
+    {
+      "user__first_name": "Thomas",
+      "user__last_name": "Hernandez",
+      "user__username": "student189",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:26.892626+00:00"
+    },
+    {
+      "user__first_name": "William",
+      "user__last_name": "Wilson",
+      "user__username": "student190",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:27.156578+00:00"
+    },
+    {
+      "user__first_name": "David",
+      "user__last_name": "Keller",
+      "user__username": "student191",
+      "school_class__name": "Grade 6",
+      "user__date_joined": "2025-09-04 06:48:27.467839+00:00"
+    },
+    {
+      "user__first_name": "Tracey",
+      "user__last_name": "Ward",
+      "user__username": "student192",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:27.761251+00:00"
+    },
+    {
+      "user__first_name": "Sarah",
+      "user__last_name": "Wagner",
+      "user__username": "student193",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:28.026945+00:00"
+    },
+    {
+      "user__first_name": "Melissa",
+      "user__last_name": "Jones",
+      "user__username": "student194",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:28.295545+00:00"
+    },
+    {
+      "user__first_name": "Isaiah",
+      "user__last_name": "Martin",
+      "user__username": "student195",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:28.578946+00:00"
+    },
+    {
+      "user__first_name": "Fernando",
+      "user__last_name": "Carson",
+      "user__username": "student196",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:28.842875+00:00"
+    },
+    {
+      "user__first_name": "Kevin",
+      "user__last_name": "Wilson",
+      "user__username": "student197",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:29.097379+00:00"
+    },
+    {
+      "user__first_name": "Justin",
+      "user__last_name": "Rodriguez",
+      "user__username": "student198",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:29.356079+00:00"
+    },
+    {
+      "user__first_name": "Sarah",
+      "user__last_name": "Rogers",
+      "user__username": "student199",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:29.628164+00:00"
+    },
+    {
+      "user__first_name": "Brian",
+      "user__last_name": "Scott",
+      "user__username": "student200",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:29.904392+00:00"
+    },
+    {
+      "user__first_name": "William",
+      "user__last_name": "Goodman",
+      "user__username": "student201",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:30.182833+00:00"
+    },
+    {
+      "user__first_name": "Sonya",
+      "user__last_name": "Jones",
+      "user__username": "student202",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:30.428496+00:00"
+    },
+    {
+      "user__first_name": "David",
+      "user__last_name": "Waters",
+      "user__username": "student203",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:30.697284+00:00"
+    },
+    {
+      "user__first_name": "Brad",
+      "user__last_name": "Gardner",
+      "user__username": "student204",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:30.963398+00:00"
+    },
+    {
+      "user__first_name": "Jason",
+      "user__last_name": "Riley",
+      "user__username": "student205",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:31.222479+00:00"
+    },
+    {
+      "user__first_name": "Stephen",
+      "user__last_name": "Walsh",
+      "user__username": "student206",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:31.493684+00:00"
+    },
+    {
+      "user__first_name": "Erica",
+      "user__last_name": "Richardson",
+      "user__username": "student207",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:31.754116+00:00"
+    },
+    {
+      "user__first_name": "Anthony",
+      "user__last_name": "Riley",
+      "user__username": "student208",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:32.045077+00:00"
+    },
+    {
+      "user__first_name": "Angela",
+      "user__last_name": "Austin",
+      "user__username": "student209",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:32.300719+00:00"
+    },
+    {
+      "user__first_name": "Michael",
+      "user__last_name": "Johnson",
+      "user__username": "student210",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:32.567006+00:00"
+    },
+    {
+      "user__first_name": "Jeffrey",
+      "user__last_name": "Gonzalez",
+      "user__username": "student211",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:32.854218+00:00"
+    },
+    {
+      "user__first_name": "Jay",
+      "user__last_name": "Carter",
+      "user__username": "student212",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:33.120358+00:00"
+    },
+    {
+      "user__first_name": "Amy",
+      "user__last_name": "Mckinney",
+      "user__username": "student213",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:33.392173+00:00"
+    },
+    {
+      "user__first_name": "Joseph",
+      "user__last_name": "Mack",
+      "user__username": "student214",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:33.659569+00:00"
+    },
+    {
+      "user__first_name": "Jessica",
+      "user__last_name": "Watson",
+      "user__username": "student215",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:33.921436+00:00"
+    },
+    {
+      "user__first_name": "Patrick",
+      "user__last_name": "Sexton",
+      "user__username": "student216",
+      "school_class__name": "Grade 7",
+      "user__date_joined": "2025-09-04 06:48:34.181668+00:00"
+    },
+    {
+      "user__first_name": "Julie",
+      "user__last_name": "Mayer",
+      "user__username": "student217",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:34.464399+00:00"
+    },
+    {
+      "user__first_name": "James",
+      "user__last_name": "Guzman",
+      "user__username": "student218",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:34.724788+00:00"
+    },
+    {
+      "user__first_name": "Steven",
+      "user__last_name": "Hernandez",
+      "user__username": "student219",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:34.984341+00:00"
+    },
+    {
+      "user__first_name": "Grant",
+      "user__last_name": "Adams",
+      "user__username": "student220",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:35.256769+00:00"
+    },
+    {
+      "user__first_name": "Christine",
+      "user__last_name": "French",
+      "user__username": "student221",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:35.530065+00:00"
+    },
+    {
+      "user__first_name": "Dana",
+      "user__last_name": "Shaw",
+      "user__username": "student222",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:35.807587+00:00"
+    },
+    {
+      "user__first_name": "Ashley",
+      "user__last_name": "Hayes",
+      "user__username": "student223",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:36.087215+00:00"
+    },
+    {
+      "user__first_name": "Dawn",
+      "user__last_name": "Price",
+      "user__username": "student224",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:36.355770+00:00"
+    },
+    {
+      "user__first_name": "Miranda",
+      "user__last_name": "Martin",
+      "user__username": "student225",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:36.613015+00:00"
+    },
+    {
+      "user__first_name": "Nicole",
+      "user__last_name": "Diaz",
+      "user__username": "student226",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:36.866288+00:00"
+    },
+    {
+      "user__first_name": "Anthony",
+      "user__last_name": "Fox",
+      "user__username": "student227",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:37.123942+00:00"
+    },
+    {
+      "user__first_name": "Jo",
+      "user__last_name": "Gamble",
+      "user__username": "student228",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:37.387834+00:00"
+    },
+    {
+      "user__first_name": "Amanda",
+      "user__last_name": "Jordan",
+      "user__username": "student229",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:37.658322+00:00"
+    },
+    {
+      "user__first_name": "Clayton",
+      "user__last_name": "Cardenas",
+      "user__username": "student230",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:37.916816+00:00"
+    },
+    {
+      "user__first_name": "Rebecca",
+      "user__last_name": "Bradley",
+      "user__username": "student231",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:38.157448+00:00"
+    },
+    {
+      "user__first_name": "Ian",
+      "user__last_name": "English",
+      "user__username": "student232",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:38.410879+00:00"
+    },
+    {
+      "user__first_name": "Paula",
+      "user__last_name": "Morris",
+      "user__username": "student233",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:38.660861+00:00"
+    },
+    {
+      "user__first_name": "Barry",
+      "user__last_name": "Bailey",
+      "user__username": "student234",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:38.917353+00:00"
+    },
+    {
+      "user__first_name": "Kimberly",
+      "user__last_name": "Peters",
+      "user__username": "student235",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:39.167895+00:00"
+    },
+    {
+      "user__first_name": "Tim",
+      "user__last_name": "Guerrero",
+      "user__username": "student236",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:39.417800+00:00"
+    },
+    {
+      "user__first_name": "Walter",
+      "user__last_name": "Bates",
+      "user__username": "student237",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:39.679913+00:00"
+    },
+    {
+      "user__first_name": "Peter",
+      "user__last_name": "Jenkins",
+      "user__username": "student238",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:39.938050+00:00"
+    },
+    {
+      "user__first_name": "Paul",
+      "user__last_name": "Herrera",
+      "user__username": "student239",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:40.189260+00:00"
+    },
+    {
+      "user__first_name": "Keith",
+      "user__last_name": "Sandoval",
+      "user__username": "student240",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:40.564041+00:00"
+    },
+    {
+      "user__first_name": "Paul",
+      "user__last_name": "Kelly",
+      "user__username": "student241",
+      "school_class__name": "Grade 8",
+      "user__date_joined": "2025-09-04 06:48:40.829550+00:00"
+    },
+    {
+      "user__first_name": "Matthew",
+      "user__last_name": "Blanchard",
+      "user__username": "student242",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:41.101927+00:00"
+    },
+    {
+      "user__first_name": "Dana",
+      "user__last_name": "Stewart",
+      "user__username": "student243",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:41.363821+00:00"
+    },
+    {
+      "user__first_name": "Spencer",
+      "user__last_name": "Smith",
+      "user__username": "student244",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:41.639694+00:00"
+    },
+    {
+      "user__first_name": "Sharon",
+      "user__last_name": "Smith",
+      "user__username": "student245",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:41.900644+00:00"
+    },
+    {
+      "user__first_name": "Tyler",
+      "user__last_name": "Stewart",
+      "user__username": "student246",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:42.170215+00:00"
+    },
+    {
+      "user__first_name": "Amy",
+      "user__last_name": "Horton",
+      "user__username": "student247",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:42.445786+00:00"
+    },
+    {
+      "user__first_name": "Alexandra",
+      "user__last_name": "Baxter",
+      "user__username": "student248",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:42.697566+00:00"
+    },
+    {
+      "user__first_name": "Kevin",
+      "user__last_name": "Johnson",
+      "user__username": "student249",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:42.963260+00:00"
+    },
+    {
+      "user__first_name": "Lindsay",
+      "user__last_name": "Beltran",
+      "user__username": "student250",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:43.218583+00:00"
+    },
+    {
+      "user__first_name": "Harry",
+      "user__last_name": "White",
+      "user__username": "student251",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:43.500999+00:00"
+    },
+    {
+      "user__first_name": "Barbara",
+      "user__last_name": "Houston",
+      "user__username": "student252",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:43.768510+00:00"
+    },
+    {
+      "user__first_name": "Tammy",
+      "user__last_name": "Hernandez",
+      "user__username": "student253",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:44.032024+00:00"
+    },
+    {
+      "user__first_name": "Brady",
+      "user__last_name": "Miller",
+      "user__username": "student254",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:44.295719+00:00"
+    },
+    {
+      "user__first_name": "James",
+      "user__last_name": "Dunlap",
+      "user__username": "student255",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:44.568285+00:00"
+    },
+    {
+      "user__first_name": "Jason",
+      "user__last_name": "Marshall",
+      "user__username": "student256",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:44.838376+00:00"
+    },
+    {
+      "user__first_name": "Tina",
+      "user__last_name": "White",
+      "user__username": "student257",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:45.101625+00:00"
+    },
+    {
+      "user__first_name": "Cody",
+      "user__last_name": "Ortiz",
+      "user__username": "student258",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:45.358668+00:00"
+    },
+    {
+      "user__first_name": "Jennifer",
+      "user__last_name": "Ellis",
+      "user__username": "student259",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:45.642892+00:00"
+    },
+    {
+      "user__first_name": "Michelle",
+      "user__last_name": "Lewis",
+      "user__username": "student260",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:45.922008+00:00"
+    },
+    {
+      "user__first_name": "Shane",
+      "user__last_name": "Johnson",
+      "user__username": "student261",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:46.237333+00:00"
+    },
+    {
+      "user__first_name": "Rhonda",
+      "user__last_name": "Ingram",
+      "user__username": "student262",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:46.536168+00:00"
+    },
+    {
+      "user__first_name": "Katherine",
+      "user__last_name": "David",
+      "user__username": "student263",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:46.785922+00:00"
+    },
+    {
+      "user__first_name": "Donna",
+      "user__last_name": "Walter",
+      "user__username": "student264",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:47.039621+00:00"
+    },
+    {
+      "user__first_name": "Brandon",
+      "user__last_name": "Kennedy",
+      "user__username": "student265",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:47.294484+00:00"
+    },
+    {
+      "user__first_name": "Deborah",
+      "user__last_name": "Lee",
+      "user__username": "student266",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:47.545693+00:00"
+    },
+    {
+      "user__first_name": "David",
+      "user__last_name": "Herman",
+      "user__username": "student267",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:47.794619+00:00"
+    },
+    {
+      "user__first_name": "Joseph",
+      "user__last_name": "Mckee",
+      "user__username": "student268",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:48.053164+00:00"
+    },
+    {
+      "user__first_name": "Nicholas",
+      "user__last_name": "Reid",
+      "user__username": "student269",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:48.312896+00:00"
+    },
+    {
+      "user__first_name": "Karen",
+      "user__last_name": "Newman",
+      "user__username": "student270",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:48.565405+00:00"
+    },
+    {
+      "user__first_name": "Carol",
+      "user__last_name": "King",
+      "user__username": "student271",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:48.815017+00:00"
+    },
+    {
+      "user__first_name": "Arthur",
+      "user__last_name": "Brown",
+      "user__username": "student272",
+      "school_class__name": "Grade 9",
+      "user__date_joined": "2025-09-04 06:48:49.059444+00:00"
+    },
+    {
+      "user__first_name": "Sabrina",
+      "user__last_name": "Best",
+      "user__username": "student273",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:49.321158+00:00"
+    },
+    {
+      "user__first_name": "Julie",
+      "user__last_name": "Oconnor",
+      "user__username": "student274",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:49.580376+00:00"
+    },
+    {
+      "user__first_name": "Lance",
+      "user__last_name": "Johnson",
+      "user__username": "student275",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:49.835966+00:00"
+    },
+    {
+      "user__first_name": "Devon",
+      "user__last_name": "Floyd",
+      "user__username": "student276",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:50.085504+00:00"
+    },
+    {
+      "user__first_name": "Aaron",
+      "user__last_name": "Fernandez",
+      "user__username": "student277",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:50.442617+00:00"
+    },
+    {
+      "user__first_name": "Nathan",
+      "user__last_name": "Shaw",
+      "user__username": "student278",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:50.712410+00:00"
+    },
+    {
+      "user__first_name": "Joseph",
+      "user__last_name": "Park",
+      "user__username": "student279",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:50.994834+00:00"
+    },
+    {
+      "user__first_name": "Tyler",
+      "user__last_name": "Fernandez",
+      "user__username": "student280",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:51.253108+00:00"
+    },
+    {
+      "user__first_name": "Micheal",
+      "user__last_name": "Jones",
+      "user__username": "student281",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:51.508004+00:00"
+    },
+    {
+      "user__first_name": "Jacob",
+      "user__last_name": "Clark",
+      "user__username": "student282",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:51.782481+00:00"
+    },
+    {
+      "user__first_name": "Amber",
+      "user__last_name": "James",
+      "user__username": "student283",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:52.058138+00:00"
+    },
+    {
+      "user__first_name": "Edward",
+      "user__last_name": "Robinson",
+      "user__username": "student284",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:52.329261+00:00"
+    },
+    {
+      "user__first_name": "John",
+      "user__last_name": "Johnson",
+      "user__username": "student285",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:52.588311+00:00"
+    },
+    {
+      "user__first_name": "Nicolas",
+      "user__last_name": "Anderson",
+      "user__username": "student286",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:52.857497+00:00"
+    },
+    {
+      "user__first_name": "Jason",
+      "user__last_name": "Barry",
+      "user__username": "student287",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:53.128993+00:00"
+    },
+    {
+      "user__first_name": "Cheryl",
+      "user__last_name": "Smith",
+      "user__username": "student288",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:53.383061+00:00"
+    },
+    {
+      "user__first_name": "Katherine",
+      "user__last_name": "Roberts",
+      "user__username": "student289",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:53.649356+00:00"
+    },
+    {
+      "user__first_name": "Sean",
+      "user__last_name": "Yang",
+      "user__username": "student290",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:53.961061+00:00"
+    },
+    {
+      "user__first_name": "David",
+      "user__last_name": "Turner",
+      "user__username": "student291",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:54.221982+00:00"
+    },
+    {
+      "user__first_name": "Terry",
+      "user__last_name": "Garcia",
+      "user__username": "student292",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:54.502073+00:00"
+    },
+    {
+      "user__first_name": "Robert",
+      "user__last_name": "Garza",
+      "user__username": "student293",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:54.770771+00:00"
+    },
+    {
+      "user__first_name": "John",
+      "user__last_name": "Chen",
+      "user__username": "student294",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:55.042098+00:00"
+    },
+    {
+      "user__first_name": "Craig",
+      "user__last_name": "Tucker",
+      "user__username": "student295",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:55.296392+00:00"
+    },
+    {
+      "user__first_name": "Ashley",
+      "user__last_name": "Spears",
+      "user__username": "student296",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:55.537195+00:00"
+    },
+    {
+      "user__first_name": "Mikayla",
+      "user__last_name": "Nicholson",
+      "user__username": "student297",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:55.784713+00:00"
+    },
+    {
+      "user__first_name": "Alan",
+      "user__last_name": "Elliott",
+      "user__username": "student298",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:56.035130+00:00"
+    },
+    {
+      "user__first_name": "Matthew",
+      "user__last_name": "Sanchez",
+      "user__username": "student299",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:56.280751+00:00"
+    },
+    {
+      "user__first_name": "Vincent",
+      "user__last_name": "Gomez",
+      "user__username": "student300",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:56.575973+00:00"
+    },
+    {
+      "user__first_name": "Nathaniel",
+      "user__last_name": "King",
+      "user__username": "student301",
+      "school_class__name": "Grade 10",
+      "user__date_joined": "2025-09-04 06:48:56.834685+00:00"
+    },
+    {
+      "user__first_name": "Anne",
+      "user__last_name": "Jones",
+      "user__username": "student302",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:48:57.105523+00:00"
+    },
+    {
+      "user__first_name": "Amanda",
+      "user__last_name": "Garcia",
+      "user__username": "student303",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:48:57.372097+00:00"
+    },
+    {
+      "user__first_name": "Amy",
+      "user__last_name": "Maxwell",
+      "user__username": "student304",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:48:57.655764+00:00"
+    },
+    {
+      "user__first_name": "Brett",
+      "user__last_name": "Dillon",
+      "user__username": "student305",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:48:57.924889+00:00"
+    },
+    {
+      "user__first_name": "Linda",
+      "user__last_name": "Bonilla",
+      "user__username": "student306",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:48:58.190178+00:00"
+    },
+    {
+      "user__first_name": "Jeremy",
+      "user__last_name": "Hess",
+      "user__username": "student307",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:48:58.455353+00:00"
+    },
+    {
+      "user__first_name": "Marvin",
+      "user__last_name": "Woodard",
+      "user__username": "student308",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:48:58.714303+00:00"
+    },
+    {
+      "user__first_name": "Blake",
+      "user__last_name": "Campbell",
+      "user__username": "student309",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:48:58.990007+00:00"
+    },
+    {
+      "user__first_name": "Scott",
+      "user__last_name": "Austin",
+      "user__username": "student310",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:48:59.259291+00:00"
+    },
+    {
+      "user__first_name": "Jessica",
+      "user__last_name": "Cox",
+      "user__username": "student311",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:48:59.530942+00:00"
+    },
+    {
+      "user__first_name": "Gene",
+      "user__last_name": "Thomas",
+      "user__username": "student312",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:48:59.795720+00:00"
+    },
+    {
+      "user__first_name": "Brett",
+      "user__last_name": "Stuart",
+      "user__username": "student313",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:00.072231+00:00"
+    },
+    {
+      "user__first_name": "Francis",
+      "user__last_name": "Farmer",
+      "user__username": "student314",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:00.367175+00:00"
+    },
+    {
+      "user__first_name": "Laura",
+      "user__last_name": "Anderson",
+      "user__username": "student315",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:00.633482+00:00"
+    },
+    {
+      "user__first_name": "Kyle",
+      "user__last_name": "Clarke",
+      "user__username": "student316",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:00.905168+00:00"
+    },
+    {
+      "user__first_name": "Clifford",
+      "user__last_name": "Morris",
+      "user__username": "student317",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:01.160773+00:00"
+    },
+    {
+      "user__first_name": "William",
+      "user__last_name": "Vaughan",
+      "user__username": "student318",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:01.422258+00:00"
+    },
+    {
+      "user__first_name": "Kyle",
+      "user__last_name": "Henry",
+      "user__username": "student319",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:01.675559+00:00"
+    },
+    {
+      "user__first_name": "Leslie",
+      "user__last_name": "Vasquez",
+      "user__username": "student320",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:01.920472+00:00"
+    },
+    {
+      "user__first_name": "Wendy",
+      "user__last_name": "Harris",
+      "user__username": "student321",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:02.183619+00:00"
+    },
+    {
+      "user__first_name": "Mark",
+      "user__last_name": "Morgan",
+      "user__username": "student322",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:02.437940+00:00"
+    },
+    {
+      "user__first_name": "Jason",
+      "user__last_name": "Burton",
+      "user__username": "student323",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:02.703275+00:00"
+    },
+    {
+      "user__first_name": "Taylor",
+      "user__last_name": "Moore",
+      "user__username": "student324",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:02.983122+00:00"
+    },
+    {
+      "user__first_name": "Sharon",
+      "user__last_name": "Garcia",
+      "user__username": "student325",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:03.251866+00:00"
+    },
+    {
+      "user__first_name": "Elizabeth",
+      "user__last_name": "Fisher",
+      "user__username": "student326",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:03.509979+00:00"
+    },
+    {
+      "user__first_name": "Chad",
+      "user__last_name": "Wilson",
+      "user__username": "student327",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:03.787063+00:00"
+    },
+    {
+      "user__first_name": "Justin",
+      "user__last_name": "Vaughn",
+      "user__username": "student328",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:04.040777+00:00"
+    },
+    {
+      "user__first_name": "James",
+      "user__last_name": "Garcia",
+      "user__username": "student329",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:04.292410+00:00"
+    },
+    {
+      "user__first_name": "Katherine",
+      "user__last_name": "Wall",
+      "user__username": "student330",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:04.552293+00:00"
+    },
+    {
+      "user__first_name": "Sandra",
+      "user__last_name": "Henry",
+      "user__username": "student331",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:04.853927+00:00"
+    },
+    {
+      "user__first_name": "Garrett",
+      "user__last_name": "Sanchez",
+      "user__username": "student332",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:05.110189+00:00"
+    },
+    {
+      "user__first_name": "Patricia",
+      "user__last_name": "Armstrong",
+      "user__username": "student333",
+      "school_class__name": "Grade 11",
+      "user__date_joined": "2025-09-04 06:49:05.372182+00:00"
+    },
+    {
+      "user__first_name": "James",
+      "user__last_name": "Morgan",
+      "user__username": "student334",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:05.649393+00:00"
+    },
+    {
+      "user__first_name": "Samantha",
+      "user__last_name": "Harrell",
+      "user__username": "student335",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:05.916274+00:00"
+    },
+    {
+      "user__first_name": "Luis",
+      "user__last_name": "Gray",
+      "user__username": "student336",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:06.172172+00:00"
+    },
+    {
+      "user__first_name": "David",
+      "user__last_name": "Morales",
+      "user__username": "student337",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:06.427550+00:00"
+    },
+    {
+      "user__first_name": "Anthony",
+      "user__last_name": "Smith",
+      "user__username": "student338",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:06.691590+00:00"
+    },
+    {
+      "user__first_name": "Michael",
+      "user__last_name": "Pierce",
+      "user__username": "student339",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:06.927635+00:00"
+    },
+    {
+      "user__first_name": "Stacey",
+      "user__last_name": "Figueroa",
+      "user__username": "student340",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:07.170350+00:00"
+    },
+    {
+      "user__first_name": "Toni",
+      "user__last_name": "Miller",
+      "user__username": "student341",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:07.424622+00:00"
+    },
+    {
+      "user__first_name": "Jeremy",
+      "user__last_name": "Jackson",
+      "user__username": "student342",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:07.679186+00:00"
+    },
+    {
+      "user__first_name": "Amanda",
+      "user__last_name": "Taylor",
+      "user__username": "student343",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:07.953194+00:00"
+    },
+    {
+      "user__first_name": "Erin",
+      "user__last_name": "Jennings",
+      "user__username": "student344",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:08.192894+00:00"
+    },
+    {
+      "user__first_name": "Shawn",
+      "user__last_name": "Young",
+      "user__username": "student345",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:08.431439+00:00"
+    },
+    {
+      "user__first_name": "Brandy",
+      "user__last_name": "Thompson",
+      "user__username": "student346",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:08.673579+00:00"
+    },
+    {
+      "user__first_name": "Michael",
+      "user__last_name": "Stone",
+      "user__username": "student347",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:08.932150+00:00"
+    },
+    {
+      "user__first_name": "Courtney",
+      "user__last_name": "Nichols",
+      "user__username": "student348",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:09.186934+00:00"
+    },
+    {
+      "user__first_name": "Eric",
+      "user__last_name": "Orozco",
+      "user__username": "student349",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:09.453739+00:00"
+    },
+    {
+      "user__first_name": "Sierra",
+      "user__last_name": "Chandler",
+      "user__username": "student350",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:09.703666+00:00"
+    },
+    {
+      "user__first_name": "Christine",
+      "user__last_name": "Ray",
+      "user__username": "student351",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:09.949879+00:00"
+    },
+    {
+      "user__first_name": "Angela",
+      "user__last_name": "Mcmillan",
+      "user__username": "student352",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:10.191954+00:00"
+    },
+    {
+      "user__first_name": "Allen",
+      "user__last_name": "Boyle",
+      "user__username": "student353",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:10.448289+00:00"
+    },
+    {
+      "user__first_name": "Hannah",
+      "user__last_name": "Preston",
+      "user__username": "student354",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:10.690701+00:00"
+    },
+    {
+      "user__first_name": "Christopher",
+      "user__last_name": "Bell",
+      "user__username": "student355",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:10.964669+00:00"
+    },
+    {
+      "user__first_name": "Rebecca",
+      "user__last_name": "Ray",
+      "user__username": "student356",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:11.241621+00:00"
+    },
+    {
+      "user__first_name": "Donald",
+      "user__last_name": "Freeman",
+      "user__username": "student357",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:11.493957+00:00"
+    },
+    {
+      "user__first_name": "Christine",
+      "user__last_name": "Carter",
+      "user__username": "student358",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:11.747168+00:00"
+    },
+    {
+      "user__first_name": "Erin",
+      "user__last_name": "Garner",
+      "user__username": "student359",
+      "school_class__name": "Grade 12",
+      "user__date_joined": "2025-09-04 06:49:12.029561+00:00"
+    }
+  ],
+  "class_distribution": [
+    {
+      "name": "Class 10A",
+      "student_count": 0
+    },
+    {
+      "name": "Class 10B",
+      "student_count": 0
+    },
+    {
+      "name": "Class 9A",
+      "student_count": 0
+    },
+    {
+      "name": "Class 9B",
+      "student_count": 0
+    },
+    {
+      "name": "Class 8A",
+      "student_count": 0
+    },
+    {
+      "name": "Grade 1",
+      "student_count": 26
+    },
+    {
+      "name": "Grade 2",
+      "student_count": 32
+    },
+    {
+      "name": "Grade 3",
+      "student_count": 35
+    },
+    {
+      "name": "Grade 4",
+      "student_count": 34
+    },
+    {
+      "name": "Grade 5",
+      "student_count": 34
+    },
+    {
+      "name": "Grade 6",
+      "student_count": 30
+    },
+    {
+      "name": "Grade 7",
+      "student_count": 25
+    },
+    {
+      "name": "Grade 8",
+      "student_count": 25
+    },
+    {
+      "name": "Grade 9",
+      "student_count": 31
+    },
+    {
+      "name": "Grade 10",
+      "student_count": 29
+    },
+    {
+      "name": "Grade 11",
+      "student_count": 32
+    },
+    {
+      "name": "Grade 12",
+      "student_count": 26
+    }
+  ],
+  "teacher_workload": [
+    {
+      "user__first_name": "Alice",
+      "user__last_name": "Brown",
+      "user__username": "alice_brown",
+      "class_count": 0
+    },
+    {
+      "user__first_name": "Bob",
+      "user__last_name": "Johnson",
+      "user__username": "bob_johnson",
+      "class_count": 0
+    },
+    {
+      "user__first_name": "Jane",
+      "user__last_name": "Smith",
+      "user__username": "jane_smith",
+      "class_count": 0
+    },
+    {
+      "user__first_name": "John",
+      "user__last_name": "Doe",
+      "user__username": "john_doe",
+      "class_count": 0
+    },
+    {
+      "user__first_name": "Pamela",
+      "user__last_name": "Zimmerman",
+      "user__username": "teacher1",
+      "class_count": 1
+    },
+    {
+      "user__first_name": "Michael",
+      "user__last_name": "Randall",
+      "user__username": "teacher10",
+      "class_count": 1
+    },
+    {
+      "user__first_name": "Juan",
+      "user__last_name": "Cervantes",
+      "user__username": "teacher11",
+      "class_count": 1
+    },
+    {
+      "user__first_name": "Pamela",
+      "user__last_name": "Lloyd",
+      "user__username": "teacher12",
+      "class_count": 1
+    },
+    {
+      "user__first_name": "Joseph",
+      "user__last_name": "Snyder",
+      "user__username": "teacher2",
+      "class_count": 1
+    },
+    {
+      "user__first_name": "Ricardo",
+      "user__last_name": "Little",
+      "user__username": "teacher3",
+      "class_count": 1
+    },
+    {
+      "user__first_name": "Joshua",
+      "user__last_name": "Oconnor",
+      "user__username": "teacher4",
+      "class_count": 1
+    },
+    {
+      "user__first_name": "Amanda",
+      "user__last_name": "Herman",
+      "user__username": "teacher5",
+      "class_count": 1
+    },
+    {
+      "user__first_name": "Cheryl",
+      "user__last_name": "Mendoza",
+      "user__username": "teacher6",
+      "class_count": 1
+    },
+    {
+      "user__first_name": "Michael",
+      "user__last_name": "Bruce",
+      "user__username": "teacher7",
+      "class_count": 1
+    },
+    {
+      "user__first_name": "Tracy",
+      "user__last_name": "Woodward",
+      "user__username": "teacher8",
+      "class_count": 1
+    },
+    {
+      "user__first_name": "Peter",
+      "user__last_name": "Owens",
+      "user__username": "teacher9",
+      "class_count": 1
+    }
+  ],
+  "subject_distribution": [
+    {
+      "subject": "Mathematics",
+      "count": 92
+    },
+    {
+      "subject": "English",
+      "count": 87
+    },
+    {
+      "subject": "Physics",
+      "count": 76
+    },
+    {
+      "subject": "History",
+      "count": 75
+    },
+    {
+      "subject": "Chemistry",
+      "count": 73
+    },
+    {
+      "subject": "Art",
+      "count": 54
+    },
+    {
+      "subject": "Computer Science",
+      "count": 21
+    },
+    {
+      "subject": "Geography",
+      "count": 16
+    },
+    {
+      "subject": "Biology",
+      "count": 10
+    }
+  ]
+}

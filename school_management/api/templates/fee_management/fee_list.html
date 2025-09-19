@@ -1,0 +1,183 @@
+{% extends "fee_management/base.html" %}
+
+{% block title %}All Fees{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'fee_admin_dashboard' %}">Fee Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">All Fees</li>
+            </ol>
+        </nav>
+        <div class="d-flex justify-content-between align-items-center">
+            <h2><i class="fas fa-list"></i> All Fees</h2>
+            <a href="{% url 'fee_add' %}" class="btn btn-success">
+                <i class="fas fa-plus"></i> Add New Fee
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Filters -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card dashboard-card">
+            <div class="card-body">
+                <form method="get" class="row g-3">
+                    <div class="col-md-3">
+                        <label for="status" class="form-label">Status</label>
+                        <select name="status" id="status" class="form-select">
+                            <option value="">All Status</option>
+                            {% for value, label in status_choices %}
+                                <option value="{{ value }}" {% if request.GET.status == value %}selected{% endif %}>{{ label }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="student_id" class="form-label">Student</label>
+                        <select name="student_id" id="student_id" class="form-select">
+                            <option value="">All Students</option>
+                            {% for student in students %}
+                                <option value="{{ student.id }}" {% if request.GET.student_id == student.id|stringformat:"s" %}selected{% endif %}>
+                                    {{ student.user.get_full_name }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="search" class="form-label">Search</label>
+                        <input type="text" name="search" id="search" class="form-control" placeholder="Search by name..." value="{{ request.GET.search }}">
+                    </div>
+                    <div class="col-md-2 d-flex align-items-end">
+                        <button type="submit" class="btn btn-primary me-2">
+                            <i class="fas fa-search"></i> Filter
+                        </button>
+                        <a href="{% url 'fee_list' %}" class="btn btn-secondary">
+                            <i class="fas fa-times"></i> Clear
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fees Table -->
+<div class="row">
+    <div class="col-12">
+        <div class="card dashboard-card">
+            <div class="card-body">
+                {% if fees %}
+                    <div class="table-responsive">
+                        <table class="table table-hover fee-table">
+                            <thead>
+                                <tr>
+                                    <th>Student</th>
+                                    <th>Class</th>
+                                    <th>Fee Type</th>
+                                    <th>Amount</th>
+                                    <th>Due Date</th>
+                                    <th>Status</th>
+                                    <th>Outstanding</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for fee in fees %}
+                                <tr>
+                                    <td>{{ fee.student.user.get_full_name }}</td>
+                                    <td>{{ fee.student.school_class.name|default:"N/A" }}</td>
+                                    <td>{{ fee.fee_type.name }}</td>
+                                    <td>₹{{ fee.amount|floatformat:2 }}</td>
+                                    <td>{{ fee.due_date|date:"M d, Y" }}</td>
+                                    <td>
+                                        <span class="fee-status {{ fee.status }}">
+                                            {% if fee.status == 'paid' %}
+                                                <i class="fas fa-check-circle"></i> Paid
+                                            {% elif fee.status == 'unpaid' %}
+                                                <i class="fas fa-times-circle"></i> Unpaid
+                                            {% elif fee.status == 'partial' %}
+                                                <i class="fas fa-adjust"></i> Partial
+                                            {% endif %}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        {% with outstanding=fee.amount|add:fee.waived_amount|add:0 %}
+                                            {% for payment in fee.payments.all %}
+                                                {% if payment.status == 'completed' %}
+                                                    {% load mathfilters %}
+                                                    {% with outstanding=outstanding|sub:payment.amount %}
+                                                    {% endwith %}
+                                                {% endif %}
+                                            {% endfor %}
+                                            {% if outstanding > 0 %}
+                                                ₹{{ outstanding|floatformat:2 }}
+                                            {% else %}
+                                                <span class="text-success">₹0.00</span>
+                                            {% endif %}
+                                        {% endwith %}
+                                    </td>
+                                    <td>
+                                        <div class="btn-group" role="group">
+                                            <a href="{% url 'fee_detail' fee.pk %}" class="btn btn-sm btn-outline-primary">
+                                                <i class="fas fa-eye"></i> View
+                                            </a>
+                                            <a href="{% url 'fee_edit' fee.pk %}" class="btn btn-sm btn-outline-secondary">
+                                                <i class="fas fa-edit"></i> Edit
+                                            </a>
+                                            <a href="{% url 'fee_pay' fee.pk %}" class="btn btn-sm btn-outline-success">
+                                                <i class="fas fa-credit-card"></i> Pay
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pagination -->
+                    {% if is_paginated %}
+                        <nav aria-label="Fee pagination" class="mt-4">
+                            <ul class="pagination justify-content-center">
+                                {% if page_obj.has_previous %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}{% for key,value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Previous</a>
+                                    </li>
+                                {% endif %}
+
+                                {% for num in page_obj.paginator.page_range %}
+                                    {% if page_obj.number == num %}
+                                        <li class="page-item active"><span class="page-link">{{ num }}</span></li>
+                                    {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                                        <li class="page-item">
+                                            <a class="page-link" href="?page={{ num }}{% for key,value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ num }}</a>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% if page_obj.has_next %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page={{ page_obj.next_page_number }}{% for key,value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">Next</a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    {% endif %}
+                {% else %}
+                    <div class="text-center py-5">
+                        <i class="fas fa-info-circle fa-3x text-muted mb-3"></i>
+                        <h5 class="text-muted">No fees found</h5>
+                        <p class="text-muted">Try adjusting your filters or add a new fee.</p>
+                        <a href="{% url 'fee_add' %}" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Add First Fee
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

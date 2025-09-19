@@ -1,0 +1,289 @@
+{% extends "fee_management/base.html" %}
+
+{% block title %}My Fees - Student Dashboard{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <h2><i class="fas fa-tachometer-alt"></i> My Fee Dashboard</h2>
+        <p class="text-muted">Welcome back, {{ user.get_full_name|default:user.username }}! Here's an overview of your fees.</p>
+    </div>
+</div>
+
+<!-- Fee Summary Cards -->
+<div class="row mb-4">
+    <div class="col-md-3 col-sm-6 mb-3">
+        <div class="card dashboard-card text-center">
+            <div class="card-body">
+                <h5 class="card-title text-primary">
+                    <i class="fas fa-rupee-sign"></i> Total Outstanding
+                </h5>
+                <h3 class="card-text">₹{{ total_outstanding|floatformat:2 }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-3">
+        <div class="card dashboard-card text-center">
+            <div class="card-body">
+                <h5 class="card-title text-success">
+                    <i class="fas fa-check-circle"></i> Paid Fees
+                </h5>
+                <h3 class="card-text">{{ paid_fees_count }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-3">
+        <div class="card dashboard-card text-center">
+            <div class="card-body">
+                <h5 class="card-title text-warning">
+                    <i class="fas fa-clock"></i> Pending Fees
+                </h5>
+                <h3 class="card-text">{{ pending_fees_count }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-3">
+        <div class="card dashboard-card text-center">
+            <div class="card-body">
+                <h5 class="card-title text-danger">
+                    <i class="fas fa-exclamation-triangle"></i> Overdue Fees
+                </h5>
+                <h3 class="card-text">{{ overdue_fees_count }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fee List -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card dashboard-card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-list"></i> My Fees</h5>
+            </div>
+            <div class="card-body">
+                {% if fees %}
+                    <div class="table-responsive">
+                        <table class="table table-hover fee-table">
+                            <thead>
+                                <tr>
+                                    <th>Fee Type</th>
+                                    <th>Amount</th>
+                                    <th>Due Date</th>
+                                    <th>Status</th>
+                                    <th>Outstanding</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for fee in fees %}
+                                <tr>
+                                    <td>
+                                        <strong>{{ fee.fee_type.name }}</strong>
+                                        {% if fee.fee_type.description %}
+                                            <br><small class="text-muted">{{ fee.fee_type.description }}</small>
+                                        {% endif %}
+                                    </td>
+                                    <td>₹{{ fee.amount|floatformat:2 }}</td>
+                                    <td>{{ fee.due_date|date:"M d, Y" }}</td>
+                                    <td>
+                                        <span class="fee-status {{ fee.status }}">
+                                            {% if fee.status == 'paid' %}
+                                                <i class="fas fa-check-circle"></i> Paid
+                                            {% elif fee.status == 'unpaid' %}
+                                                <i class="fas fa-times-circle"></i> Unpaid
+                                            {% elif fee.status == 'partial' %}
+                                                <i class="fas fa-adjust"></i> Partial
+                                            {% endif %}
+                                        </span>
+                                        {% if fee.overdue_date and fee.status != 'paid' %}
+                                            <br><small class="text-danger">Overdue since {{ fee.overdue_date|date:"M d, Y" }}</small>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        {% if fee.status != 'paid' %}
+                                            ₹{{ fee.outstanding_amount|floatformat:2 }}
+                                        {% else %}
+                                            <span class="text-success">₹0.00</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <div class="btn-group" role="group">
+                                            <button class="btn btn-sm btn-outline-primary" data-fee-id="{{ fee.id }}" onclick="viewFeeDetails(this.getAttribute('data-fee-id'))">
+                                                <i class="fas fa-eye"></i> View
+                                            </button>
+                                            {% if fee.status != 'paid' %}
+                                                <a href="{% url 'fee_pay' fee.id %}" class="btn btn-sm btn-outline-success">
+                                                    <i class="fas fa-credit-card"></i> Pay
+                                                </a>
+                                            {% endif %}
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                    <div class="text-center py-5">
+                        <i class="fas fa-info-circle fa-3x text-muted mb-3"></i>
+                        <h5 class="text-muted">No fees found</h5>
+                        <p class="text-muted">You don't have any fees assigned yet.</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Payment History -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card dashboard-card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-history"></i> Payment History</h5>
+            </div>
+            <div class="card-body">
+                {% if payments %}
+                    <div class="payment-history">
+                        {% for payment in payments %}
+                        <div class="timeline-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <h6 class="card-title mb-1">
+                                                Payment of ₹{{ payment.amount|floatformat:2 }}
+                                            </h6>
+                                            <p class="card-text mb-1">
+                                                <small class="text-muted">
+                                                    {{ payment.payment_date|date:"M d, Y \a\t h:i A" }}
+                                                </small>
+                                            </p>
+                                            <p class="card-text">
+                                                <span class="badge bg-secondary">{{ payment.get_payment_method_display }}</span>
+                                                {% if payment.transaction_id %}
+                                                    <br><small class="text-muted">Transaction ID: {{ payment.transaction_id }}</small>
+                                                {% endif %}
+                                            </p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span class="badge
+                                                {% if payment.status == 'completed' %}bg-success
+                                                {% elif payment.status == 'pending' %}bg-warning
+                                                {% elif payment.status == 'failed' %}bg-danger
+                                                {% else %}bg-secondary{% endif %}">
+                                                {{ payment.get_status_display }}
+                                            </span>
+                                            {% if payment.status == 'completed' %}
+                                                <br><small class="text-success mt-1 d-block">Receipt Available</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    {% if payment.notes %}
+                                        <div class="mt-2">
+                                            <small class="text-muted">{{ payment.notes }}</small>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="text-center py-4">
+                        <i class="fas fa-receipt fa-2x text-muted mb-2"></i>
+                        <p class="text-muted">No payment history available</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fee Details Modal -->
+<div class="modal fade" id="feeDetailsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fas fa-info-circle"></i> Fee Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="feeDetailsContent">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function viewFeeDetails(feeId) {
+    // Show loading spinner
+    document.getElementById('feeDetailsContent').innerHTML = `
+        <div class="text-center py-4">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-2">Loading fee details...</p>
+        </div>
+    `;
+
+    // Show modal
+    const modal = new bootstrap.Modal(document.getElementById('feeDetailsModal'));
+    modal.show();
+
+    // In a real implementation, you would make an AJAX call to get fee details
+    // For now, we'll show a placeholder
+    setTimeout(() => {
+        document.getElementById('feeDetailsContent').innerHTML = `
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Fee Information</h6>
+                    <p><strong>Fee Type:</strong> Tuition Fee</p>
+                    <p><strong>Amount:</strong> ₹5,000.00</p>
+                    <p><strong>Due Date:</strong> December 31, 2024</p>
+                    <p><strong>Status:</strong> <span class="fee-status unpaid">Unpaid</span></p>
+                </div>
+                <div class="col-md-6">
+                    <h6>Payment Breakdown</h6>
+                    <p><strong>Total Paid:</strong> ₹2,500.00</p>
+                    <p><strong>Outstanding:</strong> ₹2,500.00</p>
+                    <p><strong>Last Payment:</strong> Nov 15, 2024</p>
+                </div>
+            </div>
+            <hr>
+            <h6>Payment History</h6>
+            <div class="table-responsive">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Method</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nov 15, 2024</td>
+                            <td>₹2,500.00</td>
+                            <td>UPI</td>
+                            <td><span class="badge bg-success">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        `;
+    }, 1000);
+}
+
+// Auto-refresh data every 30 seconds
+setInterval(function() {
+    // In a real implementation, you might want to refresh the data
+    // location.reload();
+}, 30000);
+</script>
+{% endblock %}
